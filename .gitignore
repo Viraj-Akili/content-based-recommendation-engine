@@ -1,0 +1,25 @@
+# Static site artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+
+# Build and package directories
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Local caches
+.cache/
+.parcel-cache/
