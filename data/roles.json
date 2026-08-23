@@ -1,0 +1,1800 @@
+[
+  {
+    "id": "ml-engineer",
+    "role": "Machine Learning Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Design, train, and deploy scalable machine learning models and inference systems in production environments.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Machine Learning", "weight": 1.0 },
+      { "name": "PyTorch", "weight": 0.9 },
+      { "name": "TensorFlow", "weight": 0.8 },
+      { "name": "MLOps", "weight": 0.9 },
+      { "name": "Docker", "weight": 0.8 },
+      { "name": "Kubernetes", "weight": 0.7 },
+      { "name": "CI/CD", "weight": 0.6 },
+      { "name": "REST APIs", "weight": 0.6 },
+      { "name": "Git", "weight": 0.5 }
+    ],
+    "relatedRoles": ["ai-research-scientist", "data-scientist", "mlops-engineer"]
+  },
+  {
+    "id": "deep-learning-engineer",
+    "role": "Deep Learning Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Develop and optimize deep neural network architectures for complex computer vision, speech, and sequence tasks.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Deep Learning", "weight": 1.0 },
+      { "name": "PyTorch", "weight": 1.0 },
+      { "name": "TensorFlow", "weight": 0.8 },
+      { "name": "CUDA", "weight": 0.8 },
+      { "name": "CNNs", "weight": 0.8 },
+      { "name": "Transformers", "weight": 0.8 },
+      { "name": "GPU Optimization", "weight": 0.7 },
+      { "name": "Mathematics", "weight": 0.7 }
+    ],
+    "relatedRoles": ["ml-engineer", "computer-vision-engineer", "nlp-engineer"]
+  },
+  {
+    "id": "mlops-engineer",
+    "role": "MLOps Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Build automated pipelines, model registries, monitoring systems, and deployment infrastructure for ML lifecycles.",
+    "skills": [
+      { "name": "MLOps", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Kubernetes", "weight": 0.9 },
+      { "name": "Docker", "weight": 0.9 },
+      { "name": "CI/CD", "weight": 0.8 },
+      { "name": "Terraform", "weight": 0.7 },
+      { "name": "AWS", "weight": 0.7 },
+      { "name": "Monitoring", "weight": 0.7 },
+      { "name": "Machine Learning", "weight": 0.6 }
+    ],
+    "relatedRoles": ["ml-engineer", "devops-engineer", "platform-engineer"]
+  },
+  {
+    "id": "nlp-engineer",
+    "role": "NLP Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Construct language models, tokenization pipelines, and natural language understanding applications.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "NLP", "weight": 1.0 },
+      { "name": "Transformers", "weight": 1.0 },
+      { "name": "Hugging Face", "weight": 0.9 },
+      { "name": "PyTorch", "weight": 0.8 },
+      { "name": "BERT", "weight": 0.8 },
+      { "name": "Deep Learning", "weight": 0.8 },
+      { "name": "Text Processing", "weight": 0.7 },
+      { "name": "Vector Databases", "weight": 0.7 }
+    ],
+    "relatedRoles": ["ml-engineer", "prompt-engineer", "ai-research-scientist"]
+  },
+  {
+    "id": "computer-vision-engineer",
+    "role": "Computer Vision Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Engineer visual processing pipelines, object detection, segmentation, and video analysis models.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Computer Vision", "weight": 1.0 },
+      { "name": "OpenCV", "weight": 1.0 },
+      { "name": "Deep Learning", "weight": 0.9 },
+      { "name": "PyTorch", "weight": 0.9 },
+      { "name": "CNNs", "weight": 0.9 },
+      { "name": "Image Processing", "weight": 0.8 },
+      { "name": "C++", "weight": 0.7 },
+      { "name": "CUDA", "weight": 0.7 }
+    ],
+    "relatedRoles": ["deep-learning-engineer", "robotics-software-engineer", "edge-ai-engineer"]
+  },
+  {
+    "id": "prompt-engineer",
+    "role": "Prompt Engineer & LLM Specialist",
+    "category": "AI / Machine Learning",
+    "description": "Design structured prompt architectures, evaluate LLM outputs, and build retrieval-augmented generation (RAG) workflows.",
+    "skills": [
+      { "name": "Prompt Engineering", "weight": 1.0 },
+      { "name": "NLP", "weight": 0.9 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Vector Databases", "weight": 0.8 },
+      { "name": "LangChain", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 },
+      { "name": "Evaluation Metrics", "weight": 0.7 }
+    ],
+    "relatedRoles": ["nlp-engineer", "ai-systems-architect", "full-stack-developer"]
+  },
+  {
+    "id": "audio-speech-ml-engineer",
+    "role": "Audio & Speech ML Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Develop speech recognition, text-to-speech, audio synthesis, and acoustic feature processing models.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Deep Learning", "weight": 0.9 },
+      { "name": "PyTorch", "weight": 0.9 },
+      { "name": "Signal Processing", "weight": 0.9 },
+      { "name": "NLP", "weight": 0.7 },
+      { "name": "C++", "weight": 0.7 },
+      { "name": "Mathematics", "weight": 0.6 }
+    ],
+    "relatedRoles": ["nlp-engineer", "deep-learning-engineer", "ai-research-scientist"]
+  },
+  {
+    "id": "reinforcement-learning-engineer",
+    "role": "Reinforcement Learning Engineer",
+    "category": "AI / Machine Learning",
+    "description": "Formulate decision-making environments, policy gradients, Q-learning, and autonomous control agents.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Reinforcement Learning", "weight": 1.0 },
+      { "name": "PyTorch", "weight": 0.9 },
+      { "name": "Mathematics", "weight": 0.9 },
+      { "name": "Simulation", "weight": 0.8 },
+      { "name": "Optimization", "weight": 0.8 },
+      { "name": "C++", "weight": 0.7 }
+    ],
+    "relatedRoles": ["robotics-software-engineer", "game-ai-programmer", "ai-research-scientist"]
+  },
+  {
+    "id": "ai-systems-architect",
+    "role": "AI Systems Architect",
+    "category": "AI / Machine Learning",
+    "description": "Design end-to-end enterprise AI architectures, model serving infrastructure, and scalable generative AI pipelines.",
+    "skills": [
+      { "name": "Machine Learning", "weight": 1.0 },
+      { "name": "Cloud", "weight": 0.9 },
+      { "name": "Microservices", "weight": 0.9 },
+      { "name": "Kubernetes", "weight": 0.8 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Distributed Systems", "weight": 0.8 },
+      { "name": "Security", "weight": 0.7 }
+    ],
+    "relatedRoles": ["ml-engineer", "cloud-architect", "platform-engineer"]
+  },
+  {
+    "id": "ai-ethics-specialist",
+    "role": "AI Ethics & Safety Specialist",
+    "category": "AI / Machine Learning",
+    "description": "Audit model fairness, detect algorithmic bias, establish safety guardrails, and enforce regulatory compliance.",
+    "skills": [
+      { "name": "Data Analysis", "weight": 0.9 },
+      { "name": "Machine Learning", "weight": 0.9 },
+      { "name": "Statistics", "weight": 0.8 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Documentation", "weight": 0.8 },
+      { "name": "Risk Assessment", "weight": 0.8 }
+    ],
+    "relatedRoles": ["ai-research-scientist", "data-scientist", "systems-analyst"]
+  },
+
+  {
+    "id": "data-scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "description": "Analyze complex datasets, build predictive models, and extract actionable insights using statistical and ML techniques.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Machine Learning", "weight": 1.0 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "Statistics", "weight": 0.9 },
+      { "name": "Pandas", "weight": 0.8 },
+      { "name": "Scikit-learn", "weight": 0.8 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "NumPy", "weight": 0.7 },
+      { "name": "Data Visualization", "weight": 0.6 }
+    ],
+    "relatedRoles": ["ml-engineer", "statistician", "decision-scientist"]
+  },
+  {
+    "id": "quantitative-analyst",
+    "role": "Quantitative Analyst",
+    "category": "Data Science",
+    "description": "Formulate mathematical and statistical models for financial risk pricing, algorithmic trading, and asset valuation.",
+    "skills": [
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Statistics", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "C++", "weight": 0.8 },
+      { "name": "Linear Algebra", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.7 },
+      { "name": "Optimization", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-scientist", "quantitative-researcher", "statistician"]
+  },
+  {
+    "id": "decision-scientist",
+    "role": "Decision Scientist",
+    "category": "Data Science",
+    "description": "Apply causal inference, experimentation, and behavioral modeling to guide strategic operational decisions.",
+    "skills": [
+      { "name": "Statistics", "weight": 1.0 },
+      { "name": "A/B Testing", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "Business Analysis", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-scientist", "bi-analyst", "systems-analyst"]
+  },
+  {
+    "id": "bi-analyst",
+    "role": "Business Intelligence Analyst",
+    "category": "Data Science",
+    "description": "Transform business data into actionable dashboards, KPIs, and analytical reporting models.",
+    "skills": [
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "Tableau", "weight": 0.9 },
+      { "name": "Power BI", "weight": 0.9 },
+      { "name": "Data Visualization", "weight": 0.9 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "Python", "weight": 0.6 }
+    ],
+    "relatedRoles": ["data-scientist", "analytics-engineer", "systems-analyst"]
+  },
+  {
+    "id": "statistician",
+    "role": "Statistician",
+    "category": "Data Science",
+    "description": "Design rigorous statistical experiments, survey methodologies, and probabilistic inference systems.",
+    "skills": [
+      { "name": "Statistics", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "R", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "Linear Algebra", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-scientist", "quantitative-analyst", "clinical-data-scientist"]
+  },
+  {
+    "id": "marketing-data-scientist",
+    "role": "Marketing Data Scientist",
+    "category": "Data Science",
+    "description": "Model customer lifetime value, attribution, churn prediction, and marketing campaign uplift.",
+    "skills": [
+      { "name": "Python", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "Machine Learning", "weight": 0.8 },
+      { "name": "Statistics", "weight": 0.8 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "A/B Testing", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-scientist", "decision-scientist", "bi-analyst"]
+  },
+  {
+    "id": "spatial-data-scientist",
+    "role": "Spatial Data Scientist",
+    "category": "Data Science",
+    "description": "Analyze geospatial datasets, satellite imagery, GIS topologies, and spatial clustering algorithms.",
+    "skills": [
+      { "name": "GIS", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Spatial Analysis", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "Data Visualization", "weight": 0.7 },
+      { "name": "Statistics", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-scientist", "computer-vision-engineer", "data-engineer"]
+  },
+  {
+    "id": "operations-research-analyst",
+    "role": "Operations Research Analyst",
+    "category": "Data Science",
+    "description": "Solve complex routing, resource allocation, and supply chain logistics problems using mathematical optimization.",
+    "skills": [
+      { "name": "Optimization", "weight": 1.0 },
+      { "name": "Linear Algebra", "weight": 0.9 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Mathematics", "weight": 0.9 },
+      { "name": "Algorithms", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.7 }
+    ],
+    "relatedRoles": ["quantitative-analyst", "statistician", "decision-scientist"]
+  },
+  {
+    "id": "clinical-data-scientist",
+    "role": "Clinical Data Scientist",
+    "category": "Data Science",
+    "description": "Analyze health records, clinical trial cohorts, and medical biomarkers using survival and epidemiological statistics.",
+    "skills": [
+      { "name": "Statistics", "weight": 1.0 },
+      { "name": "R", "weight": 0.9 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "Research", "weight": 0.7 }
+    ],
+    "relatedRoles": ["bioinformatics-scientist", "statistician", "data-scientist"]
+  },
+  {
+    "id": "data-visualization-specialist",
+    "role": "Data Visualization Specialist",
+    "category": "Data Science",
+    "description": "Design intuitive visual representations of multi-dimensional datasets, interactive charts, and storytelling dashboards.",
+    "skills": [
+      { "name": "Data Visualization", "weight": 1.0 },
+      { "name": "D3.js", "weight": 1.0 },
+      { "name": "JavaScript", "weight": 0.9 },
+      { "name": "UI/UX", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.7 },
+      { "name": "Python", "weight": 0.6 }
+    ],
+    "relatedRoles": ["frontend-developer", "bi-analyst", "data-scientist"]
+  },
+
+  {
+    "id": "data-engineer",
+    "role": "Data Engineer",
+    "category": "Data Engineering",
+    "description": "Construct scalable batch and streaming data pipelines, warehouses, and transformation workflows.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "Spark", "weight": 0.9 },
+      { "name": "Airflow", "weight": 0.9 },
+      { "name": "ETL", "weight": 0.9 },
+      { "name": "Data Pipelines", "weight": 0.9 },
+      { "name": "AWS", "weight": 0.7 },
+      { "name": "PostgreSQL", "weight": 0.7 }
+    ],
+    "relatedRoles": ["big-data-engineer", "analytics-engineer", "data-lake-architect"]
+  },
+  {
+    "id": "big-data-engineer",
+    "role": "Big Data Engineer",
+    "category": "Data Engineering",
+    "description": "Engineer distributed storage and high-throughput data processing across massive cluster architectures.",
+    "skills": [
+      { "name": "Spark", "weight": 1.0 },
+      { "name": "Hadoop", "weight": 0.9 },
+      { "name": "Scala", "weight": 0.9 },
+      { "name": "Java", "weight": 0.8 },
+      { "name": "Kafka", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "Python", "weight": 0.8 }
+    ],
+    "relatedRoles": ["data-engineer", "stream-processing-engineer", "distributed-systems-engineer"]
+  },
+  {
+    "id": "analytics-engineer",
+    "role": "Analytics Engineer",
+    "category": "Data Engineering",
+    "description": "Bridge data engineering and analysis by building clean data models, dbt pipelines, and semantic layers.",
+    "skills": [
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "dbt", "weight": 1.0 },
+      { "name": "Data Pipelines", "weight": 0.8 },
+      { "name": "Snowflake", "weight": 0.8 },
+      { "name": "Python", "weight": 0.7 },
+      { "name": "Git", "weight": 0.7 },
+      { "name": "Data Analysis", "weight": 0.6 }
+    ],
+    "relatedRoles": ["data-engineer", "bi-analyst", "data-scientist"]
+  },
+  {
+    "id": "etl-developer",
+    "role": "ETL Developer",
+    "category": "Data Engineering",
+    "description": "Design extract, transform, and load procedures to consolidate disparate transactional sources into warehouses.",
+    "skills": [
+      { "name": "ETL", "weight": 1.0 },
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "Data Warehousing", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "PostgreSQL", "weight": 0.7 },
+      { "name": "Linux", "weight": 0.6 }
+    ],
+    "relatedRoles": ["data-engineer", "database-administrator", "analytics-engineer"]
+  },
+  {
+    "id": "stream-processing-engineer",
+    "role": "Stream Processing Engineer",
+    "category": "Data Engineering",
+    "description": "Architect real-time event streaming systems and low-latency stateful event-driven pipelines.",
+    "skills": [
+      { "name": "Kafka", "weight": 1.0 },
+      { "name": "Flink", "weight": 1.0 },
+      { "name": "Java", "weight": 0.9 },
+      { "name": "Distributed Systems", "weight": 0.8 },
+      { "name": "Python", "weight": 0.7 },
+      { "name": "SQL", "weight": 0.7 }
+    ],
+    "relatedRoles": ["big-data-engineer", "data-engineer", "distributed-systems-engineer"]
+  },
+  {
+    "id": "data-lake-architect",
+    "role": "Data Lake Architect",
+    "category": "Data Engineering",
+    "description": "Design storage tiering, Iceberg/Delta lake formats, partitioning, and governance for unstructured and semi-structured data.",
+    "skills": [
+      { "name": "Cloud", "weight": 1.0 },
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Spark", "weight": 0.9 },
+      { "name": "Data Warehousing", "weight": 0.8 },
+      { "name": "Security", "weight": 0.7 },
+      { "name": "SQL", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-engineer", "cloud-architect", "data-governance-engineer"]
+  },
+  {
+    "id": "data-governance-engineer",
+    "role": "Data Governance & Quality Engineer",
+    "category": "Data Engineering",
+    "description": "Implement metadata catalogs, data lineage tracking, privacy masking, and automated quality assertion frameworks.",
+    "skills": [
+      { "name": "Data Analysis", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Security", "weight": 0.8 },
+      { "name": "Documentation", "weight": 0.7 }
+    ],
+    "relatedRoles": ["data-engineer", "database-administrator", "systems-analyst"]
+  },
+  {
+    "id": "database-reliability-engineer",
+    "role": "Database Reliability Engineer",
+    "category": "Data Engineering",
+    "description": "Ensure high availability, automated failover, replication, and performance optimization for database fleets.",
+    "skills": [
+      { "name": "PostgreSQL", "weight": 1.0 },
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "Linux", "weight": 0.9 },
+      { "name": "Performance Tuning", "weight": 0.9 },
+      { "name": "Replication", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.7 },
+      { "name": "Bash", "weight": 0.7 }
+    ],
+    "relatedRoles": ["database-administrator", "site-reliability-engineer", "backend-developer"]
+  },
+
+  {
+    "id": "backend-developer",
+    "role": "Backend Developer",
+    "category": "Software Engineering",
+    "description": "Build robust server-side business logic, microservices, REST/GraphQL APIs, and database persistence layers.",
+    "skills": [
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Java", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.9 },
+      { "name": "PostgreSQL", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.7 },
+      { "name": "Microservices", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["full-stack-developer", "api-engineer", "python-backend-developer"]
+  },
+  {
+    "id": "systems-software-engineer",
+    "role": "Systems Software Engineer",
+    "category": "Software Engineering",
+    "description": "Develop low-level operating system components, kernel modules, file systems, and high-concurrency runtimes.",
+    "skills": [
+      { "name": "C++", "weight": 1.0 },
+      { "name": "C", "weight": 1.0 },
+      { "name": "Linux", "weight": 0.9 },
+      { "name": "Operating Systems", "weight": 0.9 },
+      { "name": "Performance", "weight": 0.8 },
+      { "name": "Algorithms", "weight": 0.8 }
+    ],
+    "relatedRoles": ["cplusplus-systems-engineer", "rust-developer", "embedded-systems-engineer"]
+  },
+  {
+    "id": "api-engineer",
+    "role": "API Platform Engineer",
+    "category": "Software Engineering",
+    "description": "Design resilient API gateways, developer portals, rate limiting, authentication, and schema contracts.",
+    "skills": [
+      { "name": "REST APIs", "weight": 1.0 },
+      { "name": "GraphQL", "weight": 0.9 },
+      { "name": "gRPC", "weight": 0.8 },
+      { "name": "Node.js", "weight": 0.8 },
+      { "name": "Microservices", "weight": 0.8 },
+      { "name": "Security", "weight": 0.7 },
+      { "name": "Docker", "weight": 0.6 }
+    ],
+    "relatedRoles": ["backend-developer", "full-stack-developer", "microservices-architect"]
+  },
+  {
+    "id": "cplusplus-systems-engineer",
+    "role": "C++ High Performance Engineer",
+    "category": "Software Engineering",
+    "description": "Engineer low-latency execution engines, memory-managed backends, and performance-critical numerical kernels.",
+    "skills": [
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Performance", "weight": 1.0 },
+      { "name": "Algorithms", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Mathematics", "weight": 0.7 },
+      { "name": "Git", "weight": 0.5 }
+    ],
+    "relatedRoles": ["systems-software-engineer", "game-engine-programmer", "quantitative-analyst"]
+  },
+  {
+    "id": "rust-developer",
+    "role": "Rust Systems Developer",
+    "category": "Software Engineering",
+    "description": "Construct memory-safe, fearless-concurrency network servers, CLI tools, and systems-level utilities using Rust.",
+    "skills": [
+      { "name": "Rust", "weight": 1.0 },
+      { "name": "Linux", "weight": 0.9 },
+      { "name": "Algorithms", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 },
+      { "name": "Performance", "weight": 0.6 }
+    ],
+    "relatedRoles": ["systems-software-engineer", "blockchain-developer", "backend-developer"]
+  },
+  {
+    "id": "java-enterprise-engineer",
+    "role": "Java Enterprise Engineer",
+    "category": "Software Engineering",
+    "description": "Architect mission-critical enterprise applications, transaction management, and service buses with Spring Boot.",
+    "skills": [
+      { "name": "Java", "weight": 1.0 },
+      { "name": "Spring Boot", "weight": 1.0 },
+      { "name": "Microservices", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "PostgreSQL", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["backend-developer", "microservices-architect", "api-engineer"]
+  },
+  {
+    "id": "python-backend-developer",
+    "role": "Python Backend Developer",
+    "category": "Software Engineering",
+    "description": "Develop asynchronous web services, background workers, ORM schemas, and RESTful APIs using FastAPI and Django.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "FastAPI", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.9 },
+      { "name": "PostgreSQL", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["backend-developer", "full-stack-developer", "data-engineer"]
+  },
+  {
+    "id": "go-backend-developer",
+    "role": "Go Backend Developer",
+    "category": "Software Engineering",
+    "description": "Construct high-throughput concurrent cloud microservices and network proxies using Go and goroutines.",
+    "skills": [
+      { "name": "Go", "weight": 1.0 },
+      { "name": "REST APIs", "weight": 0.9 },
+      { "name": "gRPC", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.8 },
+      { "name": "Kubernetes", "weight": 0.7 },
+      { "name": "PostgreSQL", "weight": 0.7 },
+      { "name": "Microservices", "weight": 0.7 }
+    ],
+    "relatedRoles": ["backend-developer", "platform-engineer", "cloud-architect"]
+  },
+  {
+    "id": "distributed-systems-engineer",
+    "role": "Distributed Systems Engineer",
+    "category": "Software Engineering",
+    "description": "Formulate consensus protocols, distributed locks, partitioning strategies, and partition-tolerant cluster architectures.",
+    "skills": [
+      { "name": "Distributed Systems", "weight": 1.0 },
+      { "name": "Algorithms", "weight": 0.9 },
+      { "name": "Go", "weight": 0.8 },
+      { "name": "Java", "weight": 0.8 },
+      { "name": "Networking", "weight": 0.8 },
+      { "name": "Linux", "weight": 0.7 }
+    ],
+    "relatedRoles": ["systems-software-engineer", "stream-processing-engineer", "cloud-architect"]
+  },
+  {
+    "id": "microservices-architect",
+    "role": "Microservices Architect",
+    "category": "Software Engineering",
+    "description": "Define service boundaries, asynchronous event sourcing, domain-driven design, and API federation.",
+    "skills": [
+      { "name": "Microservices", "weight": 1.0 },
+      { "name": "REST APIs", "weight": 0.9 },
+      { "name": "Docker", "weight": 0.9 },
+      { "name": "Kubernetes", "weight": 0.8 },
+      { "name": "Cloud", "weight": 0.8 },
+      { "name": "Security", "weight": 0.7 }
+    ],
+    "relatedRoles": ["backend-developer", "cloud-architect", "api-engineer"]
+  },
+
+  {
+    "id": "frontend-developer",
+    "role": "Frontend Developer",
+    "category": "Web Development",
+    "description": "Craft responsive, accessible user interfaces and web clients using modern JavaScript frameworks and design systems.",
+    "skills": [
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "React", "weight": 1.0 },
+      { "name": "HTML", "weight": 0.9 },
+      { "name": "CSS", "weight": 0.9 },
+      { "name": "TypeScript", "weight": 0.8 },
+      { "name": "UI/UX", "weight": 0.7 },
+      { "name": "REST APIs", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["full-stack-developer", "react-specialist", "ui-engineer"]
+  },
+  {
+    "id": "full-stack-developer",
+    "role": "Full Stack Developer",
+    "category": "Web Development",
+    "description": "Build cohesive web applications across both client-side interfaces and server-side APIs and databases.",
+    "skills": [
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "React", "weight": 0.9 },
+      { "name": "Node.js", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "HTML", "weight": 0.7 },
+      { "name": "CSS", "weight": 0.7 },
+      { "name": "PostgreSQL", "weight": 0.6 },
+      { "name": "Docker", "weight": 0.6 }
+    ],
+    "relatedRoles": ["frontend-developer", "backend-developer", "nextjs-developer"]
+  },
+  {
+    "id": "ui-engineer",
+    "role": "UI Engineer & Design Systems Specialist",
+    "category": "Web Development",
+    "description": "Build modular component libraries, accessible token systems, and interactive micro-animations.",
+    "skills": [
+      { "name": "CSS", "weight": 1.0 },
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 0.9 },
+      { "name": "React", "weight": 0.9 },
+      { "name": "UI/UX", "weight": 0.9 },
+      { "name": "HTML", "weight": 0.8 },
+      { "name": "Storybook", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "web-accessibility-engineer", "data-visualization-specialist"]
+  },
+  {
+    "id": "jamstack-developer",
+    "role": "Jamstack & Headless CMS Developer",
+    "category": "Web Development",
+    "description": "Construct pre-rendered static websites, serverless functions, and headless CMS integrations.",
+    "skills": [
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "HTML", "weight": 0.9 },
+      { "name": "CSS", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "GraphQL", "weight": 0.8 },
+      { "name": "TypeScript", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "nextjs-developer", "full-stack-developer"]
+  },
+  {
+    "id": "web-performance-engineer",
+    "role": "Web Performance & Core Web Vitals Engineer",
+    "category": "Web Development",
+    "description": "Profile client-side rendering pipelines, bundle asset delivery, latency optimizations, and Core Web Vitals.",
+    "skills": [
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "Performance", "weight": 1.0 },
+      { "name": "HTML", "weight": 0.8 },
+      { "name": "CSS", "weight": 0.8 },
+      { "name": "Testing", "weight": 0.7 },
+      { "name": "Monitoring", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "ui-engineer", "site-reliability-engineer"]
+  },
+  {
+    "id": "angular-developer",
+    "role": "Angular Enterprise Developer",
+    "category": "Web Development",
+    "description": "Build large-scale single page applications with Angular, RxJS observables, and NgRx state management.",
+    "skills": [
+      { "name": "Angular", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 1.0 },
+      { "name": "RxJS", "weight": 0.9 },
+      { "name": "HTML", "weight": 0.8 },
+      { "name": "CSS", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "full-stack-developer", "ui-engineer"]
+  },
+  {
+    "id": "react-specialist",
+    "role": "React Ecosystem Specialist",
+    "category": "Web Development",
+    "description": "Specialize in advanced React patterns, state management, concurrent rendering, and server components.",
+    "skills": [
+      { "name": "React", "weight": 1.0 },
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 0.9 },
+      { "name": "Redux", "weight": 0.8 },
+      { "name": "HTML", "weight": 0.8 },
+      { "name": "CSS", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "nextjs-developer", "full-stack-developer"]
+  },
+  {
+    "id": "vuejs-developer",
+    "role": "Vue.js & Nuxt Developer",
+    "category": "Web Development",
+    "description": "Develop modular web applications using Vue 3 Composition API, Pinia state stores, and Nuxt.js SSR.",
+    "skills": [
+      { "name": "Vue.js", "weight": 1.0 },
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 0.8 },
+      { "name": "HTML", "weight": 0.8 },
+      { "name": "CSS", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "full-stack-developer", "ui-engineer"]
+  },
+  {
+    "id": "nextjs-developer",
+    "role": "Next.js & Full Stack React Developer",
+    "category": "Web Development",
+    "description": "Build edge-rendered, full-stack applications with React Server Components, server actions, and route handlers.",
+    "skills": [
+      { "name": "Next.js", "weight": 1.0 },
+      { "name": "React", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 0.9 },
+      { "name": "JavaScript", "weight": 0.9 },
+      { "name": "Node.js", "weight": 0.8 },
+      { "name": "PostgreSQL", "weight": 0.7 },
+      { "name": "REST APIs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["react-specialist", "full-stack-developer", "frontend-developer"]
+  },
+  {
+    "id": "web-accessibility-engineer",
+    "role": "Web Accessibility (a11y) Specialist",
+    "category": "Web Development",
+    "description": "Audit and remediate web applications for WCAG 2.2 AA/AAA compliance, screen readers, and keyboard navigation.",
+    "skills": [
+      { "name": "HTML", "weight": 1.0 },
+      { "name": "Accessibility", "weight": 1.0 },
+      { "name": "CSS", "weight": 0.9 },
+      { "name": "JavaScript", "weight": 0.9 },
+      { "name": "UI/UX", "weight": 0.8 },
+      { "name": "Testing", "weight": 0.8 }
+    ],
+    "relatedRoles": ["ui-engineer", "frontend-developer", "automation-engineer"]
+  },
+
+  {
+    "id": "devops-engineer",
+    "role": "DevOps Engineer",
+    "category": "Cloud / DevOps",
+    "description": "Automate build and deployment pipelines, manage container fleets, and automate cloud infrastructure.",
+    "skills": [
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Docker", "weight": 0.9 },
+      { "name": "Kubernetes", "weight": 0.9 },
+      { "name": "CI/CD", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Terraform", "weight": 0.8 },
+      { "name": "Bash", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["site-reliability-engineer", "cloud-architect", "platform-engineer"]
+  },
+  {
+    "id": "cloud-architect",
+    "role": "Cloud Solutions Architect",
+    "category": "Cloud / DevOps",
+    "description": "Design resilient, multi-region cloud architectures, security boundaries, and migration blueprints across AWS/GCP/Azure.",
+    "skills": [
+      { "name": "Cloud", "weight": 1.0 },
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Azure", "weight": 0.8 },
+      { "name": "GCP", "weight": 0.8 },
+      { "name": "Kubernetes", "weight": 0.8 },
+      { "name": "Security", "weight": 0.8 },
+      { "name": "Terraform", "weight": 0.7 },
+      { "name": "Networking", "weight": 0.7 }
+    ],
+    "relatedRoles": ["devops-engineer", "platform-engineer", "cloud-security-engineer"]
+  },
+  {
+    "id": "site-reliability-engineer",
+    "role": "Site Reliability Engineer (SRE)",
+    "category": "Cloud / DevOps",
+    "description": "Maximize availability, latency targets, SLO/SLA management, chaos engineering, and incident response automation.",
+    "skills": [
+      { "name": "Linux", "weight": 1.0 },
+      { "name": "Kubernetes", "weight": 0.9 },
+      { "name": "Monitoring", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.8 },
+      { "name": "CI/CD", "weight": 0.8 },
+      { "name": "Bash", "weight": 0.7 },
+      { "name": "SLOs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["devops-engineer", "observability-engineer", "platform-engineer"]
+  },
+  {
+    "id": "platform-engineer",
+    "role": "Platform Engineer (Internal Developer Platform)",
+    "category": "Cloud / DevOps",
+    "description": "Build developer self-service platforms, golden paths, service templates, and Kubernetes workload abstractions.",
+    "skills": [
+      { "name": "Kubernetes", "weight": 1.0 },
+      { "name": "Terraform", "weight": 0.9 },
+      { "name": "Go", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.8 },
+      { "name": "CI/CD", "weight": 0.8 },
+      { "name": "Cloud", "weight": 0.8 }
+    ],
+    "relatedRoles": ["devops-engineer", "site-reliability-engineer", "cloud-architect"]
+  },
+  {
+    "id": "iac-engineer",
+    "role": "Infrastructure as Code (IaC) Engineer",
+    "category": "Cloud / DevOps",
+    "description": "Manage declarative cloud provisioning, modular modules, and drift detection via Terraform and OpenTofu.",
+    "skills": [
+      { "name": "Terraform", "weight": 1.0 },
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Cloud", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Ansible", "weight": 0.7 },
+      { "name": "Git", "weight": 0.7 }
+    ],
+    "relatedRoles": ["devops-engineer", "cloud-architect", "platform-engineer"]
+  },
+  {
+    "id": "kubernetes-architect",
+    "role": "Kubernetes Cluster Architect",
+    "category": "Cloud / DevOps",
+    "description": "Design multi-tenant container orchestration clusters, ingress controllers, CNI networking, and service meshes.",
+    "skills": [
+      { "name": "Kubernetes", "weight": 1.0 },
+      { "name": "Docker", "weight": 0.9 },
+      { "name": "Networking", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Go", "weight": 0.7 },
+      { "name": "Monitoring", "weight": 0.7 }
+    ],
+    "relatedRoles": ["platform-engineer", "site-reliability-engineer", "cloud-architect"]
+  },
+  {
+    "id": "multi-cloud-engineer",
+    "role": "Multi-Cloud Engineer",
+    "category": "Cloud / DevOps",
+    "description": "Deploy distributed applications across heterogeneous cloud providers and hybrid data centers.",
+    "skills": [
+      { "name": "Cloud", "weight": 1.0 },
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Azure", "weight": 0.9 },
+      { "name": "GCP", "weight": 0.8 },
+      { "name": "Terraform", "weight": 0.8 },
+      { "name": "Networking", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cloud-architect", "devops-engineer", "iac-engineer"]
+  },
+  {
+    "id": "build-release-engineer",
+    "role": "Build & Release Engineer",
+    "category": "Cloud / DevOps",
+    "description": "Maintain hermetic build systems, artifact registries, compilation matrices, and deployment pipelines.",
+    "skills": [
+      { "name": "CI/CD", "weight": 1.0 },
+      { "name": "Git", "weight": 0.9 },
+      { "name": "Bash", "weight": 0.8 },
+      { "name": "Docker", "weight": 0.8 },
+      { "name": "Python", "weight": 0.7 },
+      { "name": "Linux", "weight": 0.7 }
+    ],
+    "relatedRoles": ["devops-engineer", "platform-engineer", "automation-engineer"]
+  },
+  {
+    "id": "observability-engineer",
+    "role": "Observability & Telemetry Engineer",
+    "category": "Cloud / DevOps",
+    "description": "Implement OpenTelemetry instrumentation, distributed tracing, metrics aggregation, and alert pipelines.",
+    "skills": [
+      { "name": "Monitoring", "weight": 1.0 },
+      { "name": "Alerting", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Kubernetes", "weight": 0.8 },
+      { "name": "Python", "weight": 0.7 },
+      { "name": "Go", "weight": 0.6 }
+    ],
+    "relatedRoles": ["site-reliability-engineer", "devops-engineer", "platform-engineer"]
+  },
+  {
+    "id": "finops-specialist",
+    "role": "FinOps Cloud Cost Specialist",
+    "category": "Cloud / DevOps",
+    "description": "Analyze cloud infrastructure expenditures, implement automated rightsizing policies, and optimize resource spend.",
+    "skills": [
+      { "name": "Cloud", "weight": 1.0 },
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.7 },
+      { "name": "Monitoring", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cloud-architect", "devops-engineer", "bi-analyst"]
+  },
+
+  {
+    "id": "cybersecurity-analyst",
+    "role": "Cybersecurity Analyst",
+    "category": "Cybersecurity",
+    "description": "Monitor organizational networks, identify vulnerabilities, triage alerts, and implement defensive security posture.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Networking", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Firewalls", "weight": 0.8 },
+      { "name": "SIEM", "weight": 0.8 },
+      { "name": "Risk Assessment", "weight": 0.7 }
+    ],
+    "relatedRoles": ["soc-analyst", "penetration-tester", "incident-response-specialist"]
+  },
+  {
+    "id": "penetration-tester",
+    "role": "Penetration Tester (Ethical Hacker)",
+    "category": "Cybersecurity",
+    "description": "Conduct authorized offensive security assessments, exploit vulnerabilities, and simulate red team attacks.",
+    "skills": [
+      { "name": "Penetration Testing", "weight": 1.0 },
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Linux", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Networking", "weight": 0.8 },
+      { "name": "Bash", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cybersecurity-analyst", "appsec-engineer", "malware-analyst"]
+  },
+  {
+    "id": "soc-analyst",
+    "role": "Security Operations Center (SOC) Analyst",
+    "category": "Cybersecurity",
+    "description": "Triage security events 24/7, analyze suspicious endpoint telemetry, and orchestrate automated SOAR playbooks.",
+    "skills": [
+      { "name": "SIEM", "weight": 1.0 },
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Networking", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Alerting", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cybersecurity-analyst", "incident-response-specialist", "malware-analyst"]
+  },
+  {
+    "id": "cloud-security-engineer",
+    "role": "Cloud Security Engineer",
+    "category": "Cybersecurity",
+    "description": "Implement IAM policies, cloud posture management (CSPM), secret rotation, and encrypted transit in public clouds.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Cloud", "weight": 1.0 },
+      { "name": "AWS", "weight": 0.9 },
+      { "name": "Terraform", "weight": 0.8 },
+      { "name": "Kubernetes", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cloud-architect", "devsecops-engineer", "cybersecurity-analyst"]
+  },
+  {
+    "id": "cryptography-engineer",
+    "role": "Cryptography Engineer",
+    "category": "Cybersecurity",
+    "description": "Design cryptographic primitives, secure key exchanges, zero-knowledge proofs, and post-quantum encryption schemes.",
+    "skills": [
+      { "name": "Cryptography", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "C++", "weight": 0.8 },
+      { "name": "Rust", "weight": 0.8 },
+      { "name": "Security", "weight": 0.8 }
+    ],
+    "relatedRoles": ["blockchain-developer", "systems-software-engineer", "ai-research-scientist"]
+  },
+  {
+    "id": "appsec-engineer",
+    "role": "Application Security (AppSec) Engineer",
+    "category": "Cybersecurity",
+    "description": "Embed SAST/DAST scanning in build pipelines, review code for OWASP Top 10 vulnerabilities, and model threats.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Testing", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "JavaScript", "weight": 0.8 },
+      { "name": "CI/CD", "weight": 0.7 },
+      { "name": "REST APIs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["devsecops-engineer", "penetration-tester", "backend-developer"]
+  },
+  {
+    "id": "incident-response-specialist",
+    "role": "Incident Response Specialist",
+    "category": "Cybersecurity",
+    "description": "Lead digital forensics, memory analysis, breach containment, and root cause reporting during cyber attacks.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Linux", "weight": 0.9 },
+      { "name": "Networking", "weight": 0.9 },
+      { "name": "Python", "weight": 0.7 },
+      { "name": "Bash", "weight": 0.7 }
+    ],
+    "relatedRoles": ["soc-analyst", "cybersecurity-analyst", "malware-analyst"]
+  },
+  {
+    "id": "iam-engineer",
+    "role": "Identity & Access Management (IAM) Engineer",
+    "category": "Cybersecurity",
+    "description": "Design zero-trust authentication, SAML/OAuth2 federation, privileged access management, and directory integration.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Cloud", "weight": 0.9 },
+      { "name": "AWS", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 },
+      { "name": "Linux", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cloud-security-engineer", "cybersecurity-analyst", "cloud-architect"]
+  },
+  {
+    "id": "malware-analyst",
+    "role": "Malware Analyst & Reverse Engineer",
+    "category": "Cybersecurity",
+    "description": "Disassemble compiled malicious binaries in sandboxes, analyze shellcode, and extract threat indicators (IOCs).",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "C++", "weight": 0.9 },
+      { "name": "C", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Python", "weight": 0.8 }
+    ],
+    "relatedRoles": ["penetration-tester", "incident-response-specialist", "systems-software-engineer"]
+  },
+  {
+    "id": "devsecops-engineer",
+    "role": "DevSecOps Engineer",
+    "category": "Cybersecurity",
+    "description": "Integrate automated policy enforcement, secret scanning, and compliance validation directly into CI/CD pipelines.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "CI/CD", "weight": 1.0 },
+      { "name": "Docker", "weight": 0.9 },
+      { "name": "Kubernetes", "weight": 0.9 },
+      { "name": "Terraform", "weight": 0.8 },
+      { "name": "Python", "weight": 0.7 }
+    ],
+    "relatedRoles": ["devops-engineer", "cloud-security-engineer", "appsec-engineer"]
+  },
+
+  {
+    "id": "mobile-developer",
+    "role": "Mobile App Developer",
+    "category": "Mobile Development",
+    "description": "Build responsive and offline-capable mobile applications for iOS and Android devices.",
+    "skills": [
+      { "name": "Swift", "weight": 0.9 },
+      { "name": "Kotlin", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "Git", "weight": 0.7 },
+      { "name": "UI/UX", "weight": 0.7 }
+    ],
+    "relatedRoles": ["ios-developer", "android-developer", "react-native-developer"]
+  },
+  {
+    "id": "ios-developer",
+    "role": "Native iOS Developer",
+    "category": "Mobile Development",
+    "description": "Engineer native iOS, iPadOS, and watchOS applications using Swift, SwiftUI, and CoreData frameworks.",
+    "skills": [
+      { "name": "Swift", "weight": 1.0 },
+      { "name": "iOS", "weight": 1.0 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "UI/UX", "weight": 0.8 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["mobile-developer", "react-native-developer", "flutter-developer"]
+  },
+  {
+    "id": "android-developer",
+    "role": "Native Android Developer",
+    "category": "Mobile Development",
+    "description": "Develop native Android apps with Kotlin, Jetpack Compose, Coroutines, and Room database persistence.",
+    "skills": [
+      { "name": "Kotlin", "weight": 1.0 },
+      { "name": "Android", "weight": 1.0 },
+      { "name": "Java", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "UI/UX", "weight": 0.7 }
+    ],
+    "relatedRoles": ["mobile-developer", "flutter-developer", "react-native-developer"]
+  },
+  {
+    "id": "react-native-developer",
+    "role": "React Native Developer",
+    "category": "Mobile Development",
+    "description": "Build high-performance cross-platform mobile apps for iOS and Android using React Native and TypeScript.",
+    "skills": [
+      { "name": "React Native", "weight": 1.0 },
+      { "name": "JavaScript", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 0.9 },
+      { "name": "React", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "UI/UX", "weight": 0.7 }
+    ],
+    "relatedRoles": ["frontend-developer", "mobile-developer", "flutter-developer"]
+  },
+  {
+    "id": "flutter-developer",
+    "role": "Flutter & Dart Developer",
+    "category": "Mobile Development",
+    "description": "Create cross-platform mobile, web, and desktop clients using Google Flutter and Dart.",
+    "skills": [
+      { "name": "Flutter", "weight": 1.0 },
+      { "name": "Dart", "weight": 1.0 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "UI/UX", "weight": 0.8 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["mobile-developer", "react-native-developer", "ios-developer"]
+  },
+  {
+    "id": "mobile-ui-engineer",
+    "role": "Mobile UI/UX Design Technologist",
+    "category": "Mobile Development",
+    "description": "Bridge mobile product design and mobile implementation with fluid gesture animations and responsive mobile layouts.",
+    "skills": [
+      { "name": "UI/UX", "weight": 1.0 },
+      { "name": "Swift", "weight": 0.8 },
+      { "name": "Kotlin", "weight": 0.8 },
+      { "name": "React Native", "weight": 0.8 },
+      { "name": "Figma", "weight": 0.7 }
+    ],
+    "relatedRoles": ["mobile-developer", "ui-engineer", "frontend-developer"]
+  },
+  {
+    "id": "mobile-security-engineer",
+    "role": "Mobile Security Specialist",
+    "category": "Mobile Development",
+    "description": "Protect mobile apps against reverse engineering, secure keystore tokens, and enforce mobile application transport security.",
+    "skills": [
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Android", "weight": 0.8 },
+      { "name": "iOS", "weight": 0.8 },
+      { "name": "Cryptography", "weight": 0.8 },
+      { "name": "Penetration Testing", "weight": 0.7 }
+    ],
+    "relatedRoles": ["cybersecurity-analyst", "mobile-developer", "appsec-engineer"]
+  },
+
+  {
+    "id": "database-administrator",
+    "role": "Database Administrator (DBA)",
+    "category": "Database Engineering",
+    "description": "Administer database instances, backup strategies, user privileges, replication topologies, and high availability.",
+    "skills": [
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "PostgreSQL", "weight": 0.9 },
+      { "name": "MySQL", "weight": 0.9 },
+      { "name": "Performance Tuning", "weight": 0.9 },
+      { "name": "Backup", "weight": 0.8 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Security", "weight": 0.7 }
+    ],
+    "relatedRoles": ["postgresql-specialist", "database-reliability-engineer", "data-engineer"]
+  },
+  {
+    "id": "postgresql-specialist",
+    "role": "PostgreSQL Database Specialist",
+    "category": "Database Engineering",
+    "description": "Architect PostgreSQL clusters, query plan analysis (EXPLAIN), connection pooling, vacuuming, and extension development.",
+    "skills": [
+      { "name": "PostgreSQL", "weight": 1.0 },
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "Performance Tuning", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Replication", "weight": 0.8 }
+    ],
+    "relatedRoles": ["database-administrator", "database-reliability-engineer", "backend-developer"]
+  },
+  {
+    "id": "nosql-architect",
+    "role": "NoSQL Database Architect",
+    "category": "Database Engineering",
+    "description": "Design document, key-value, and wide-column data stores for distributed high-write throughput.",
+    "skills": [
+      { "name": "MongoDB", "weight": 1.0 },
+      { "name": "Cassandra", "weight": 0.9 },
+      { "name": "Redis", "weight": 0.9 },
+      { "name": "Distributed Systems", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.6 }
+    ],
+    "relatedRoles": ["database-administrator", "data-engineer", "backend-developer"]
+  },
+  {
+    "id": "data-warehouse-engineer",
+    "role": "Data Warehouse Architect",
+    "category": "Database Engineering",
+    "description": "Model dimensional star schemas, columnar warehouses, and petabyte-scale analytical query engines in Snowflake/BigQuery.",
+    "skills": [
+      { "name": "Data Warehousing", "weight": 1.0 },
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "Snowflake", "weight": 0.9 },
+      { "name": "ETL", "weight": 0.8 },
+      { "name": "Data Modeling", "weight": 0.8 }
+    ],
+    "relatedRoles": ["data-engineer", "analytics-engineer", "bi-analyst"]
+  },
+  {
+    "id": "vector-database-engineer",
+    "role": "Vector Database & Search Engineer",
+    "category": "Database Engineering",
+    "description": "Develop and tune HNSW indexing, vector similarity search, and high-dimensional embeddings storage.",
+    "skills": [
+      { "name": "Vector Databases", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Algorithms", "weight": 0.9 },
+      { "name": "C++", "weight": 0.7 },
+      { "name": "Machine Learning", "weight": 0.7 }
+    ],
+    "relatedRoles": ["nlp-engineer", "ml-engineer", "database-administrator"]
+  },
+  {
+    "id": "database-migration-specialist",
+    "role": "Database Migration Specialist",
+    "category": "Database Engineering",
+    "description": "Execute zero-downtime database migrations, schema transformations, and heterogeneous cloud database transitions.",
+    "skills": [
+      { "name": "SQL", "weight": 1.0 },
+      { "name": "PostgreSQL", "weight": 0.9 },
+      { "name": "MySQL", "weight": 0.8 },
+      { "name": "Cloud", "weight": 0.8 },
+      { "name": "Data Pipelines", "weight": 0.7 }
+    ],
+    "relatedRoles": ["database-administrator", "postgresql-specialist", "cloud-architect"]
+  },
+
+  {
+    "id": "systems-analyst",
+    "role": "Systems Analyst",
+    "category": "Systems / Business Analysis",
+    "description": "Analyze technical system requirements, specify integrations, and evaluate architectural feasibility.",
+    "skills": [
+      { "name": "Business Analysis", "weight": 1.0 },
+      { "name": "SQL", "weight": 0.9 },
+      { "name": "Requirements", "weight": 0.9 },
+      { "name": "Documentation", "weight": 0.9 },
+      { "name": "Project Management", "weight": 0.7 },
+      { "name": "Agile", "weight": 0.7 }
+    ],
+    "relatedRoles": ["it-business-analyst", "technical-product-manager", "solutions-engineer"]
+  },
+  {
+    "id": "it-business-analyst",
+    "role": "IT Business Analyst",
+    "category": "Systems / Business Analysis",
+    "description": "Translate business stakeholder workflows into user stories, process flow diagrams, and functional test plans.",
+    "skills": [
+      { "name": "Business Analysis", "weight": 1.0 },
+      { "name": "Requirements", "weight": 1.0 },
+      { "name": "Agile", "weight": 0.9 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "Stakeholders", "weight": 0.8 }
+    ],
+    "relatedRoles": ["systems-analyst", "scrum-master", "technical-product-manager"]
+  },
+  {
+    "id": "technical-product-manager",
+    "role": "Technical Product Manager",
+    "category": "Systems / Business Analysis",
+    "description": "Define developer product roadmaps, API specifications, feature prioritization, and engineering execution strategies.",
+    "skills": [
+      { "name": "Project Management", "weight": 1.0 },
+      { "name": "Requirements", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "SQL", "weight": 0.8 },
+      { "name": "Agile", "weight": 0.8 },
+      { "name": "Stakeholders", "weight": 0.8 }
+    ],
+    "relatedRoles": ["systems-analyst", "it-business-analyst", "solutions-engineer"]
+  },
+  {
+    "id": "solutions-engineer",
+    "role": "Solutions Engineer (Pre-Sales / Integrations)",
+    "category": "Systems / Business Analysis",
+    "description": "Architect customer proofs-of-concept, demonstrate technical APIs, and troubleshoot complex enterprise integrations.",
+    "skills": [
+      { "name": "REST APIs", "weight": 1.0 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "JavaScript", "weight": 0.8 },
+      { "name": "Cloud", "weight": 0.8 },
+      { "name": "Stakeholders", "weight": 0.8 }
+    ],
+    "relatedRoles": ["technical-product-manager", "cloud-architect", "systems-analyst"]
+  },
+  {
+    "id": "enterprise-solutions-architect",
+    "role": "Enterprise Solutions Architect",
+    "category": "Systems / Business Analysis",
+    "description": "Align business capabilities with broad IT systems portfolios, governance frameworks, and technical standards.",
+    "skills": [
+      { "name": "Cloud", "weight": 1.0 },
+      { "name": "Microservices", "weight": 0.9 },
+      { "name": "Security", "weight": 0.8 },
+      { "name": "Business Analysis", "weight": 0.8 },
+      { "name": "Stakeholders", "weight": 0.8 }
+    ],
+    "relatedRoles": ["cloud-architect", "solutions-engineer", "systems-analyst"]
+  },
+  {
+    "id": "scrum-master",
+    "role": "Scrum Master & Agile Delivery Lead",
+    "category": "Systems / Business Analysis",
+    "description": "Facilitate sprint ceremonies, remove development blockers, track team velocity, and foster continuous improvement.",
+    "skills": [
+      { "name": "Agile", "weight": 1.0 },
+      { "name": "Project Management", "weight": 1.0 },
+      { "name": "Stakeholders", "weight": 0.8 },
+      { "name": "Documentation", "weight": 0.7 }
+    ],
+    "relatedRoles": ["it-business-analyst", "technical-product-manager", "systems-analyst"]
+  },
+
+  {
+    "id": "embedded-systems-engineer",
+    "role": "Embedded Systems Engineer",
+    "category": "Embedded / IoT",
+    "description": "Program microcontrollers, RTOS kernels, device drivers, and memory-constrained hardware interfaces.",
+    "skills": [
+      { "name": "C", "weight": 1.0 },
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Embedded Systems", "weight": 1.0 },
+      { "name": "RTOS", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 },
+      { "name": "Hardware Interfacing", "weight": 0.8 }
+    ],
+    "relatedRoles": ["firmware-developer", "iot-solutions-architect", "robotics-software-engineer"]
+  },
+  {
+    "id": "firmware-developer",
+    "role": "Firmware Developer",
+    "category": "Embedded / IoT",
+    "description": "Write low-level bootloaders, hardware abstraction layers (HAL), and register-level drivers for custom silicon.",
+    "skills": [
+      { "name": "C", "weight": 1.0 },
+      { "name": "Embedded Systems", "weight": 1.0 },
+      { "name": "Hardware Interfacing", "weight": 0.9 },
+      { "name": "C++", "weight": 0.8 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["embedded-systems-engineer", "iot-solutions-architect", "systems-software-engineer"]
+  },
+  {
+    "id": "iot-solutions-architect",
+    "role": "IoT Solutions Architect",
+    "category": "Embedded / IoT",
+    "description": "Design distributed sensor networks, edge gateways, MQTT telemetry brokers, and cloud ingestion pipelines.",
+    "skills": [
+      { "name": "IoT", "weight": 1.0 },
+      { "name": "MQTT", "weight": 0.9 },
+      { "name": "Cloud", "weight": 0.9 },
+      { "name": "Python", "weight": 0.8 },
+      { "name": "Embedded Systems", "weight": 0.8 },
+      { "name": "Security", "weight": 0.7 }
+    ],
+    "relatedRoles": ["embedded-systems-engineer", "cloud-architect", "edge-ai-engineer"]
+  },
+  {
+    "id": "robotics-software-engineer",
+    "role": "Robotics Software Engineer",
+    "category": "Embedded / IoT",
+    "description": "Implement kinematics, path planning, SLAM navigation, and sensor fusion using ROS (Robot Operating System).",
+    "skills": [
+      { "name": "ROS", "weight": 1.0 },
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Computer Vision", "weight": 0.8 },
+      { "name": "Mathematics", "weight": 0.8 },
+      { "name": "Linux", "weight": 0.8 }
+    ],
+    "relatedRoles": ["autonomous-vehicles-engineer", "computer-vision-engineer", "embedded-systems-engineer"]
+  },
+  {
+    "id": "edge-ai-engineer",
+    "role": "Edge AI & TinyML Engineer",
+    "category": "Embedded / IoT",
+    "description": "Quantize, prune, and deploy lightweight neural models on microcontrollers and embedded edge accelerators.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "C++", "weight": 0.9 },
+      { "name": "TensorFlow Lite", "weight": 0.9 },
+      { "name": "Embedded Systems", "weight": 0.9 },
+      { "name": "Machine Learning", "weight": 0.8 }
+    ],
+    "relatedRoles": ["ml-engineer", "embedded-systems-engineer", "computer-vision-engineer"]
+  },
+  {
+    "id": "autonomous-vehicles-engineer",
+    "role": "Autonomous Vehicles Systems Engineer",
+    "category": "Embedded / IoT",
+    "description": "Engineer real-time perception, localization, trajectory generation, and safety controllers for autonomous mobility.",
+    "skills": [
+      { "name": "C++", "weight": 1.0 },
+      { "name": "ROS", "weight": 0.9 },
+      { "name": "Computer Vision", "weight": 0.9 },
+      { "name": "Algorithms", "weight": 0.9 },
+      { "name": "Linux", "weight": 0.8 }
+    ],
+    "relatedRoles": ["robotics-software-engineer", "computer-vision-engineer", "embedded-systems-engineer"]
+  },
+
+  {
+    "id": "blockchain-developer",
+    "role": "Blockchain Core Developer",
+    "category": "Blockchain / Web3",
+    "description": "Develop peer-to-peer consensus engines, state transition machines, cryptographic hashing, and node protocols.",
+    "skills": [
+      { "name": "Cryptography", "weight": 1.0 },
+      { "name": "Rust", "weight": 0.9 },
+      { "name": "Go", "weight": 0.9 },
+      { "name": "Distributed Systems", "weight": 0.9 },
+      { "name": "Security", "weight": 0.8 }
+    ],
+    "relatedRoles": ["smart-contract-auditor", "solidity-developer", "cryptography-engineer"]
+  },
+  {
+    "id": "solidity-developer",
+    "role": "Solidity Smart Contract Developer",
+    "category": "Blockchain / Web3",
+    "description": "Write secure smart contracts, token standards (ERC-20/721), and on-chain protocol logic on EVM blockchains.",
+    "skills": [
+      { "name": "Solidity", "weight": 1.0 },
+      { "name": "Smart Contracts", "weight": 1.0 },
+      { "name": "Ethereum", "weight": 0.9 },
+      { "name": "JavaScript", "weight": 0.8 },
+      { "name": "Security", "weight": 0.8 },
+      { "name": "Web3", "weight": 0.7 }
+    ],
+    "relatedRoles": ["smart-contract-auditor", "defi-protocol-engineer", "blockchain-developer"]
+  },
+  {
+    "id": "smart-contract-auditor",
+    "role": "Smart Contract Security Auditor",
+    "category": "Blockchain / Web3",
+    "description": "Audit EVM bytecode, detect reentrancy bugs and flash loan vulnerabilities, and conduct formal verification.",
+    "skills": [
+      { "name": "Smart Contracts", "weight": 1.0 },
+      { "name": "Solidity", "weight": 1.0 },
+      { "name": "Security", "weight": 1.0 },
+      { "name": "Ethereum", "weight": 0.9 },
+      { "name": "Cryptography", "weight": 0.8 }
+    ],
+    "relatedRoles": ["solidity-developer", "penetration-tester", "blockchain-developer"]
+  },
+  {
+    "id": "defi-protocol-engineer",
+    "role": "DeFi Protocol Engineer",
+    "category": "Blockchain / Web3",
+    "description": "Design automated market makers (AMMs), lending pools, yield mechanics, and liquidation bots.",
+    "skills": [
+      { "name": "Solidity", "weight": 1.0 },
+      { "name": "Smart Contracts", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 0.9 },
+      { "name": "Ethereum", "weight": 0.9 },
+      { "name": "TypeScript", "weight": 0.7 }
+    ],
+    "relatedRoles": ["solidity-developer", "quantitative-analyst", "smart-contract-auditor"]
+  },
+  {
+    "id": "zkp-engineer",
+    "role": "Zero-Knowledge Proof (ZKP) Engineer",
+    "category": "Blockchain / Web3",
+    "description": "Construct zk-SNARKs and zk-STARK arithmetic circuits for privacy-preserving computation and L2 rollups.",
+    "skills": [
+      { "name": "Cryptography", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Rust", "weight": 0.9 },
+      { "name": "C++", "weight": 0.8 },
+      { "name": "Security", "weight": 0.8 }
+    ],
+    "relatedRoles": ["cryptography-engineer", "blockchain-developer", "ai-research-scientist"]
+  },
+  {
+    "id": "web3-backend-engineer",
+    "role": "Web3 Indexing & Backend Engineer",
+    "category": "Blockchain / Web3",
+    "description": "Build high-speed blockchain indexing subgraphs, transaction relayers, and wallet connection backends.",
+    "skills": [
+      { "name": "Node.js", "weight": 1.0 },
+      { "name": "TypeScript", "weight": 0.9 },
+      { "name": "Web3", "weight": 0.9 },
+      { "name": "GraphQL", "weight": 0.8 },
+      { "name": "PostgreSQL", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.7 }
+    ],
+    "relatedRoles": ["backend-developer", "solidity-developer", "full-stack-developer"]
+  },
+
+  {
+    "id": "game-developer",
+    "role": "General Game Developer",
+    "category": "Game Development",
+    "description": "Implement interactive gameplay systems, asset pipelines, physics integrations, and user interfaces.",
+    "skills": [
+      { "name": "C++", "weight": 0.9 },
+      { "name": "Unity", "weight": 0.9 },
+      { "name": "C#", "weight": 0.9 },
+      { "name": "Mathematics", "weight": 0.8 },
+      { "name": "Physics", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["unity-developer", "gameplay-programmer", "unreal-engine-programmer"]
+  },
+  {
+    "id": "game-engine-programmer",
+    "role": "Game Engine Programmer",
+    "category": "Game Development",
+    "description": "Architect custom 3D game engines, memory allocators, scene graphs, and hardware abstraction rendering pipelines.",
+    "skills": [
+      { "name": "C++", "weight": 1.0 },
+      { "name": "OpenGL", "weight": 0.9 },
+      { "name": "Vulkan", "weight": 0.9 },
+      { "name": "Performance", "weight": 0.9 },
+      { "name": "Mathematics", "weight": 0.9 },
+      { "name": "Linear Algebra", "weight": 0.8 }
+    ],
+    "relatedRoles": ["graphics-programmer", "cplusplus-systems-engineer", "game-developer"]
+  },
+  {
+    "id": "gameplay-programmer",
+    "role": "Gameplay Programmer",
+    "category": "Game Development",
+    "description": "Script character controls, combat mechanics, animation state machines, and player progression systems.",
+    "skills": [
+      { "name": "C#", "weight": 1.0 },
+      { "name": "C++", "weight": 0.9 },
+      { "name": "Unity", "weight": 0.9 },
+      { "name": "Mathematics", "weight": 0.7 },
+      { "name": "Physics", "weight": 0.7 }
+    ],
+    "relatedRoles": ["game-developer", "unity-developer", "game-ai-programmer"]
+  },
+  {
+    "id": "graphics-programmer",
+    "role": "3D Graphics Programmer (Shaders & Rendering)",
+    "category": "Game Development",
+    "description": "Author real-time HLSL/GLSL shaders, ray tracing pipelines, post-processing filters, and GPU rasterization logic.",
+    "skills": [
+      { "name": "OpenGL", "weight": 1.0 },
+      { "name": "Vulkan", "weight": 1.0 },
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 0.9 },
+      { "name": "Linear Algebra", "weight": 0.9 },
+      { "name": "3D Modeling", "weight": 0.7 }
+    ],
+    "relatedRoles": ["game-engine-programmer", "vrar-developer", "cplusplus-systems-engineer"]
+  },
+  {
+    "id": "unity-developer",
+    "role": "Unity 3D Developer",
+    "category": "Game Development",
+    "description": "Develop 2D and 3D games and interactive simulations with the Unity engine, C# scripting, and Prefabs.",
+    "skills": [
+      { "name": "Unity", "weight": 1.0 },
+      { "name": "C#", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 0.7 },
+      { "name": "Physics", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["game-developer", "gameplay-programmer", "vrar-developer"]
+  },
+  {
+    "id": "unreal-engine-programmer",
+    "role": "Unreal Engine C++ Programmer",
+    "category": "Game Development",
+    "description": "Program high-fidelity games using Unreal Engine 5, C++, Blueprint visual scripts, and Niagara VFX systems.",
+    "skills": [
+      { "name": "Unreal Engine", "weight": 1.0 },
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 0.8 },
+      { "name": "Physics", "weight": 0.8 },
+      { "name": "Performance", "weight": 0.7 }
+    ],
+    "relatedRoles": ["game-engine-programmer", "game-developer", "graphics-programmer"]
+  },
+  {
+    "id": "game-ai-programmer",
+    "role": "Game AI Programmer",
+    "category": "Game Development",
+    "description": "Construct non-player character (NPC) behavior trees, goal-oriented action planning (GOAP), and navigation meshes.",
+    "skills": [
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Algorithms", "weight": 0.9 },
+      { "name": "Unity", "weight": 0.8 },
+      { "name": "Mathematics", "weight": 0.7 }
+    ],
+    "relatedRoles": ["gameplay-programmer", "reinforcement-learning-engineer", "game-developer"]
+  },
+  {
+    "id": "vrar-developer",
+    "role": "VR / AR (Spatial Computing) Developer",
+    "category": "Game Development",
+    "description": "Build immersive virtual and augmented reality experiences with spatial tracking, gesture recognition, and OpenXR.",
+    "skills": [
+      { "name": "Unity", "weight": 0.9 },
+      { "name": "Unreal Engine", "weight": 0.9 },
+      { "name": "C#", "weight": 0.9 },
+      { "name": "C++", "weight": 0.8 },
+      { "name": "3D Modeling", "weight": 0.8 },
+      { "name": "Mathematics", "weight": 0.7 }
+    ],
+    "relatedRoles": ["unity-developer", "graphics-programmer", "spatial-computing-engineer"]
+  },
+
+  {
+    "id": "ai-research-scientist",
+    "role": "AI Research Scientist",
+    "category": "Research",
+    "description": "Advance fundamental machine learning architectures, statistical learning theory, and peer-reviewed scientific breakthroughs.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Deep Learning", "weight": 1.0 },
+      { "name": "PyTorch", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Statistics", "weight": 0.9 },
+      { "name": "Research", "weight": 0.9 },
+      { "name": "Publications", "weight": 0.8 }
+    ],
+    "relatedRoles": ["ml-engineer", "deep-learning-engineer", "computational-scientist"]
+  },
+  {
+    "id": "computational-scientist",
+    "role": "Computational Scientist & Numerical Modeler",
+    "category": "Research",
+    "description": "Simulate physical, chemical, and fluid dynamic processes via partial differential equations and parallel supercomputing.",
+    "skills": [
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Physics", "weight": 1.0 },
+      { "name": "C++", "weight": 0.9 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Linear Algebra", "weight": 0.9 },
+      { "name": "Optimization", "weight": 0.8 }
+    ],
+    "relatedRoles": ["quantum-computing-engineer", "ai-research-scientist", "quantitative-researcher"]
+  },
+  {
+    "id": "bioinformatics-scientist",
+    "role": "Bioinformatics & Genomics Scientist",
+    "category": "Research",
+    "description": "Analyze genomic sequences, protein folding structures, RNA expression profiles, and biological phylogenetics.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "R", "weight": 0.9 },
+      { "name": "Statistics", "weight": 0.9 },
+      { "name": "Data Analysis", "weight": 0.9 },
+      { "name": "Machine Learning", "weight": 0.8 },
+      { "name": "Research", "weight": 0.8 }
+    ],
+    "relatedRoles": ["clinical-data-scientist", "data-scientist", "computational-scientist"]
+  },
+  {
+    "id": "quantitative-researcher",
+    "role": "Quantitative Researcher",
+    "category": "Research",
+    "description": "Discover statistical alphas, price anomaly signals, and high-frequency predictive patterns in economic datasets.",
+    "skills": [
+      { "name": "Statistics", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Machine Learning", "weight": 0.9 },
+      { "name": "Linear Algebra", "weight": 0.8 },
+      { "name": "Research", "weight": 0.8 }
+    ],
+    "relatedRoles": ["quantitative-analyst", "data-scientist", "ai-research-scientist"]
+  },
+  {
+    "id": "hci-researcher",
+    "role": "Human-Computer Interaction (HCI) Researcher",
+    "category": "Research",
+    "description": "Conduct qualitative and empirical research on human cognitive workflows, multimodal interfaces, and user experience.",
+    "skills": [
+      { "name": "UI/UX", "weight": 1.0 },
+      { "name": "Research", "weight": 1.0 },
+      { "name": "Statistics", "weight": 0.8 },
+      { "name": "Data Analysis", "weight": 0.8 },
+      { "name": "Documentation", "weight": 0.7 }
+    ],
+    "relatedRoles": ["ui-engineer", "decision-scientist", "systems-analyst"]
+  },
+
+  {
+    "id": "quantum-computing-engineer",
+    "role": "Quantum Computing Engineer",
+    "category": "Emerging Technology",
+    "description": "Implement quantum algorithms, circuit compilers, gate calibrations, and quantum error correction routines.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Qiskit", "weight": 1.0 },
+      { "name": "Quantum", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Linear Algebra", "weight": 1.0 },
+      { "name": "Physics", "weight": 0.9 },
+      { "name": "Algorithms", "weight": 0.8 },
+      { "name": "Optimization", "weight": 0.8 }
+    ],
+    "relatedRoles": ["quantum-algorithm-developer", "computational-scientist", "ai-research-scientist"]
+  },
+  {
+    "id": "quantum-algorithm-developer",
+    "role": "Quantum Algorithm Developer",
+    "category": "Emerging Technology",
+    "description": "Formulate quantum Hamiltonian simulations, variational quantum eigensolvers (VQE), and QAOA optimization circuits.",
+    "skills": [
+      { "name": "Quantum", "weight": 1.0 },
+      { "name": "Qiskit", "weight": 1.0 },
+      { "name": "Mathematics", "weight": 1.0 },
+      { "name": "Linear Algebra", "weight": 0.9 },
+      { "name": "Python", "weight": 0.9 },
+      { "name": "Optimization", "weight": 0.9 }
+    ],
+    "relatedRoles": ["quantum-computing-engineer", "computational-scientist", "quantitative-researcher"]
+  },
+  {
+    "id": "spatial-computing-engineer",
+    "role": "Spatial Computing Engineer",
+    "category": "Emerging Technology",
+    "description": "Develop 3D spatial mapping, mesh generation, eye-tracking interactions, and ambient computing interfaces.",
+    "skills": [
+      { "name": "C++", "weight": 1.0 },
+      { "name": "Computer Vision", "weight": 0.9 },
+      { "name": "Linear Algebra", "weight": 0.9 },
+      { "name": "Unity", "weight": 0.8 },
+      { "name": "3D Modeling", "weight": 0.8 }
+    ],
+    "relatedRoles": ["vrar-developer", "computer-vision-engineer", "graphics-programmer"]
+  },
+  {
+    "id": "neuromorphic-computing-engineer",
+    "role": "Neuromorphic Computing Engineer",
+    "category": "Emerging Technology",
+    "description": "Design spiking neural networks (SNNs), event-based sensor interfaces, and brain-inspired asynchronous hardware simulations.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Deep Learning", "weight": 0.9 },
+      { "name": "Mathematics", "weight": 0.9 },
+      { "name": "C++", "weight": 0.8 },
+      { "name": "Hardware Interfacing", "weight": 0.7 }
+    ],
+    "relatedRoles": ["deep-learning-engineer", "ai-research-scientist", "embedded-systems-engineer"]
+  },
+  {
+    "id": "synthetic-bio-software-engineer",
+    "role": "Synthetic Biology Software Engineer",
+    "category": "Emerging Technology",
+    "description": "Develop computer-aided DNA design software, metabolic pathway modeling tools, and automated biofoundry workflows.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Data Analysis", "weight": 0.9 },
+      { "name": "Algorithms", "weight": 0.9 },
+      { "name": "REST APIs", "weight": 0.7 },
+      { "name": "Research", "weight": 0.7 }
+    ],
+    "relatedRoles": ["bioinformatics-scientist", "computational-scientist", "backend-developer"]
+  },
+  {
+    "id": "automation-engineer",
+    "role": "QA Automation & Test Systems Engineer",
+    "category": "Software Engineering",
+    "description": "Build end-to-end automated testing suites, synthetic traffic generators, and continuous quality reporting gates.",
+    "skills": [
+      { "name": "Python", "weight": 1.0 },
+      { "name": "Testing", "weight": 1.0 },
+      { "name": "Selenium", "weight": 0.9 },
+      { "name": "CI/CD", "weight": 0.8 },
+      { "name": "REST APIs", "weight": 0.8 },
+      { "name": "Bash", "weight": 0.7 },
+      { "name": "Git", "weight": 0.6 }
+    ],
+    "relatedRoles": ["devops-engineer", "backend-developer", "build-release-engineer"]
+  }
+]

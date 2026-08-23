@@ -1,4 +1,4 @@
-# Static site artifacts
+# Static site & OS artifacts
 .DS_Store
 Thumbs.db
 desktop.ini
@@ -7,13 +7,21 @@ desktop.ini
 .vscode/
 .idea/
 
-# Build and package directories
+# Package & dependencies
 node_modules/
 dist/
 build/
 
-# Logs
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Logs & scratch
 *.log
+scratch/
+.system_generated/
 
 # Temporary files
 *.tmp

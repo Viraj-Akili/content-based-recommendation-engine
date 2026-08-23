@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-08-23T22:01:05Z",
+  "numTestCases": 60,
+  "corpusRoleCount": 118,
+  "precisionAt3": 0.6667,
+  "recallAt3": 0.6667,
+  "mrr": 1.0,
+  "catalogCoverage": 0.8898,
+  "averageLatencyMs": 0.304,
+  "categoryBreakdown": {
+    "AI / Machine Learning": {
+      "numProfiles": 6,
+      "precisionAt3": 0.7222,
+      "recallAt3": 0.7222,
+      "mrr": 1.0
+    },
+    "Blockchain / Web3": {
+      "numProfiles": 2,
+      "precisionAt3": 0.8333,
+      "recallAt3": 0.8333,
+      "mrr": 1.0
+    },
+    "Cloud / DevOps": {
+      "numProfiles": 5,
+      "precisionAt3": 0.5333,
+      "recallAt3": 0.5333,
+      "mrr": 1.0
+    },
+    "Cybersecurity": {
+      "numProfiles": 5,
+      "precisionAt3": 0.7333,
+      "recallAt3": 0.7333,
+      "mrr": 1.0
+    },
+    "Data Engineering": {
+      "numProfiles": 4,
+      "precisionAt3": 0.6667,
+      "recallAt3": 0.6667,
+      "mrr": 1.0
+    },
+    "Data Science": {
+      "numProfiles": 6,
+      "precisionAt3": 0.6111,
+      "recallAt3": 0.6111,
+      "mrr": 1.0
+    },
+    "Database Engineering": {
+      "numProfiles": 3,
+      "precisionAt3": 0.5556,
+      "recallAt3": 0.5556,
+      "mrr": 1.0
+    },
+    "Embedded / IoT": {
+      "numProfiles": 3,
+      "precisionAt3": 0.6667,
+      "recallAt3": 0.6667,
+      "mrr": 1.0
+    },
+    "Emerging Technology": {
+      "numProfiles": 1,
+      "precisionAt3": 1.0,
+      "recallAt3": 1.0,
+      "mrr": 1.0
+    },
+    "Game Development": {
+      "numProfiles": 3,
+      "precisionAt3": 0.6667,
+      "recallAt3": 0.6667,
+      "mrr": 1.0
+    },
+    "Mobile Development": {
+      "numProfiles": 4,
+      "precisionAt3": 0.75,
+      "recallAt3": 0.75,
+      "mrr": 1.0
+    },
+    "Research": {
+      "numProfiles": 2,
+      "precisionAt3": 0.5,
+      "recallAt3": 0.5,
+      "mrr": 1.0
+    },
+    "Software Engineering": {
+      "numProfiles": 7,
+      "precisionAt3": 0.5714,
+      "recallAt3": 0.5714,
+      "mrr": 1.0
+    },
+    "Systems / Business Analysis": {
+      "numProfiles": 2,
+      "precisionAt3": 0.8333,
+      "recallAt3": 0.8333,
+      "mrr": 1.0
+    },
+    "Web Development": {
+      "numProfiles": 7,
+      "precisionAt3": 0.7143,
+      "recallAt3": 0.7143,
+      "mrr": 1.0
+    }
+  },
+  "errorAnalysisSummary": {
+    "rank1Count": 60,
+    "rank1Percentage": 100.0,
+    "rank2or3Count": 0,
+    "rank2or3Percentage": 0.0,
+    "missedCount": 0,
+    "missedPercentage": 0.0,
+    "commonMissCauses": [
+      "Generic shared skill sets (e.g. Python, SQL, REST APIs) distributed equally across multiple sub-specialties.",
+      "Sub-field ambiguity where sibling roles (e.g., Data Scientist vs. Decision Scientist vs. ML Engineer) have overlapping core TF-IDF signatures.",
+      "Input sparsity: queries with only 3 generalized skills have flatter vector projections compared to 5-skill queries."
+    ]
+  },
+  "detailedErrorAnalysis": {
+    "missedProfiles": [],
+    "rank2or3Profiles": []
+  }
+}

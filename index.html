@@ -1,798 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Content-Based Recommendation Engine</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
-
-  :root {
-    --bg: #0d0f14;
-    --surface: #13161e;
-    --card: #1a1f2c;
-    --border: #252b3a;
-    --accent: #4f8cff;
-    --accent2: #a78bfa;
-    --success: #34d399;
-    --warn: #f59e0b;
-    --text: #e8eaf0;
-    --muted: #6b7280;
-    --mono: 'JetBrains Mono', monospace;
-    --sans: 'Space Grotesk', sans-serif;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  header {
-    padding: 28px 40px 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    border-bottom: 1px solid var(--border);
-  }
-  .logo-badge {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    border-radius: 10px;
-    width: 40px; height: 40px;
-    display: grid; place-items: center;
-    font-size: 18px; flex-shrink: 0;
-  }
-  header h1 { font-size: 1.1rem; font-weight: 600; letter-spacing: -.3px; }
-  header p  { font-size: .75rem; color: var(--muted); margin-top: 2px; }
-  .badge {
-    margin-left: auto;
-    background: rgba(79,140,255,.12);
-    color: var(--accent);
-    border: 1px solid rgba(79,140,255,.3);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: .7rem;
-    font-family: var(--mono);
-    letter-spacing: .5px;
-  }
-
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 48px 24px 40px;
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 28px;
-    align-items: start;
-  }
-
-  .panel {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px;
-  }
-
-  .panel-title {
-    font-size: .65rem;
-    font-family: var(--mono);
-    color: var(--muted);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  .skill-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
-  .skill-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .skill-row label {
-    font-size: .7rem;
-    font-family: var(--mono);
-    color: var(--accent);
-    width: 22px;
-    flex-shrink: 0;
-  }
-
-  .skill-input {
-    flex: 1;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 14px;
-    color: var(--text);
-    font-family: var(--mono);
-    font-size: .82rem;
-    outline: none;
-    transition: border-color .2s, box-shadow .2s;
-  }
-  .skill-input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(79,140,255,.15);
-  }
-  .skill-input::placeholder { color: var(--muted); }
-
-  .autocomplete-wrap { position: relative; flex: 1; }
-  .suggestions {
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 0; right: 0;
-    background: var(--card);
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    z-index: 100;
-    max-height: 180px;
-    overflow-y: auto;
-    display: none;
-  }
-  .suggestions.open { display: block; }
-  .suggestion-item {
-    padding: 8px 14px;
-    font-size: .8rem;
-    font-family: var(--mono);
-    cursor: pointer;
-    transition: background .15s;
-  }
-  .suggestion-item:hover { background: rgba(79,140,255,.15); }
-
-  .tag-area {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-    min-height: 36px;
-  }
-  .tag {
-    background: rgba(79,140,255,.15);
-    border: 1px solid rgba(79,140,255,.4);
-    color: var(--accent);
-    border-radius: 6px;
-    padding: 5px 10px;
-    font-size: .72rem;
-    font-family: var(--mono);
-    display: flex; align-items: center; gap: 6px;
-    animation: pop .2s ease;
-  }
-  @keyframes pop { from { transform: scale(.8); opacity:0; } to { transform: scale(1); opacity:1; } }
-  .tag-remove {
-    cursor: pointer;
-    opacity: .6;
-    font-size: .9rem;
-    line-height: 1;
-    transition: opacity .15s;
-  }
-  .tag-remove:hover { opacity: 1; }
-
-  .btn {
-    width: 100%;
-    padding: 13px;
-    border: none;
-    border-radius: 10px;
-    font-family: var(--sans);
-    font-size: .9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .2s;
-    letter-spacing: .2px;
-  }
-  .btn-primary {
-    background: linear-gradient(135deg, var(--accent), #2563eb);
-    color: #fff;
-  }
-  .btn-primary:hover { filter: brightness(1.12); transform: translateY(-1px); }
-  .btn-primary:active { transform: translateY(0); }
-  .btn-primary:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-  .btn-ghost {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    margin-top: 10px;
-    font-size: .8rem;
-  }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-
-  .step-hint {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    background: rgba(167,139,250,.08);
-    border: 1px solid rgba(167,139,250,.2);
-    border-radius: 8px;
-    padding: 12px 14px;
-    margin-top: 16px;
-    font-size: .75rem;
-    color: #c4b5fd;
-    line-height: 1.5;
-  }
-  .step-hint .icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
-
-  .results-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .empty-state {
-    background: var(--surface);
-    border: 1px dashed var(--border);
-    border-radius: 16px;
-    padding: 60px 32px;
-    text-align: center;
-  }
-  .empty-icon { font-size: 3rem; margin-bottom: 16px; opacity: .4; }
-  .empty-state h3 { font-size: 1rem; font-weight: 500; color: var(--muted); }
-  .empty-state p  { font-size: .8rem; color: var(--border); margin-top: 6px; }
-
-  .result-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 22px 24px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-    align-items: start;
-    transition: border-color .2s, transform .2s;
-    animation: slideUp .35s ease both;
-  }
-  .result-card:hover { border-color: rgba(79,140,255,.4); transform: translateY(-2px); }
-  @keyframes slideUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
-  .result-card:nth-child(1) { animation-delay: .05s; }
-  .result-card:nth-child(2) { animation-delay: .12s; }
-  .result-card:nth-child(3) { animation-delay: .19s; }
-
-  .rank-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: .65rem;
-    font-family: var(--mono);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .rank-1 .rank-badge { color: #fbbf24; }
-  .rank-2 .rank-badge { color: #94a3b8; }
-  .rank-3 .rank-badge { color: #cd7f32; }
-
-  .result-card h2 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-  .result-card .role-desc {
-    font-size: .78rem;
-    color: var(--muted);
-    line-height: 1.55;
-    margin-bottom: 12px;
-  }
-
-  .skill-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .pill {
-    border-radius: 5px;
-    padding: 3px 9px;
-    font-size: .68rem;
-    font-family: var(--mono);
-  }
-  .pill-match {
-    background: rgba(52,211,153,.15);
-    border: 1px solid rgba(52,211,153,.35);
-    color: var(--success);
-  }
-  .pill-extra {
-    background: rgba(107,114,128,.12);
-    border: 1px solid rgba(107,114,128,.25);
-    color: var(--muted);
-  }
-
-  .score-ring {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-    gap: 4px;
-  }
-  .ring-wrap {
-    position: relative;
-    width: 64px; height: 64px;
-  }
-  .ring-wrap svg { transform: rotate(-90deg); }
-  .ring-bg { fill: none; stroke: var(--border); stroke-width: 5; }
-  .ring-fill {
-    fill: none;
-    stroke-width: 5;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 1s cubic-bezier(.4,0,.2,1);
-  }
-  .rank-1 .ring-fill { stroke: #fbbf24; }
-  .rank-2 .ring-fill { stroke: #94a3b8; }
-  .rank-3 .ring-fill { stroke: #cd7f32; }
-  .ring-pct {
-    position: absolute;
-    inset: 0;
-    display: grid; place-items: center;
-    font-family: var(--mono);
-    font-size: .78rem;
-    font-weight: 600;
-  }
-  .score-label { font-size: .6rem; color: var(--muted); font-family: var(--mono); }
-
-  .vector-section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 20px 24px;
-    animation: slideUp .4s ease .25s both;
-  }
-  .vector-title {
-    font-size: .65rem;
-    font-family: var(--mono);
-    color: var(--muted);
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-  }
-  .vector-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-  }
-  .vbar-row {
-    display: grid;
-    grid-template-columns: 130px 1fr 44px;
-    gap: 8px;
-    align-items: center;
-    font-size: .72rem;
-  }
-  .vbar-label { font-family: var(--mono); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .vbar-track { background: var(--border); border-radius: 3px; height: 6px; overflow: hidden; }
-  .vbar-fill {
-    height: 100%;
-    border-radius: 3px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    transition: width 1s cubic-bezier(.4,0,.2,1);
-  }
-  .vbar-val { font-family: var(--mono); font-size: .65rem; color: var(--muted); text-align: right; }
-
-  .loader {
-    display: none;
-    text-align: center;
-    padding: 40px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-  }
-  .loader.active { display: block; }
-  .spinner {
-    width: 36px; height: 36px;
-    border: 3px solid var(--border);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin .7s linear infinite;
-    margin: 0 auto 12px;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .loader p { font-size: .8rem; color: var(--muted); font-family: var(--mono); }
-
-  footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px 32px;
-    color: var(--muted);
-    font-size: .8rem;
-    font-family: var(--mono);
-  }
-
-  ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-
-  @media (max-width: 780px) {
-    main { grid-template-columns: 1fr; padding: 24px 16px 36px; }
-    header { padding: 18px 20px; }
-    .badge { display: none; }
-    .vbar-row { grid-template-columns: 96px 1fr 44px; }
-    footer { padding: 0 16px 24px; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareerMatch — Explainable Career Recommendation Engine</title>
+  <meta name="description" content="A content-based career recommendation engine using TF-IDF vectorization, smoothed Inverse Document Frequency, and Cosine Similarity across 118 tech career roles." />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
 
-<header>
-  <div class="logo-badge">🧠</div>
-  <div>
-    <h1>Content-Based Recommendation Engine</h1>
-    <p>Interactive Recommendation System</p>
-  </div>
-  <span class="badge">TF-IDF + COSINE SIMILARITY</span>
-</header>
+  <!-- Top Navigation Header -->
+  <header class="navbar" role="banner">
+    <div class="navbar-container">
+      <a href="#" class="brand" aria-label="CareerMatch Home">
+        <div class="brand-icon" aria-hidden="true">⚡</div>
+        <div class="brand-text">
+          <h1>CareerMatch</h1>
+          <p>Explainable Career Recommendation Engine</p>
+        </div>
+      </a>
 
-<main>
-  <section class="panel" aria-label="Skill input panel">
-    <div class="panel-title">Dataset</div>
-
-    <div class="skill-grid">
-      <div class="skill-row">
-        <label for="s1">S1</label>
-        <div class="autocomplete-wrap">
-          <input class="skill-input" id="s1" aria-label="Skill input 1" placeholder="e.g. Python" autocomplete="off" />
-          <div class="suggestions" id="sug1" role="listbox" aria-label="Skill suggestions for input 1"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <label for="s2">S2</label>
-        <div class="autocomplete-wrap">
-          <input class="skill-input" id="s2" aria-label="Skill input 2" placeholder="e.g. Machine Learning" autocomplete="off" />
-          <div class="suggestions" id="sug2" role="listbox" aria-label="Skill suggestions for input 2"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <label for="s3">S3</label>
-        <div class="autocomplete-wrap">
-          <input class="skill-input" id="s3" aria-label="Skill input 3" placeholder="e.g. SQL" autocomplete="off" />
-          <div class="suggestions" id="sug3" role="listbox" aria-label="Skill suggestions for input 3"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <label for="s4" style="color:var(--muted)">S4</label>
-        <div class="autocomplete-wrap">
-          <input class="skill-input" id="s4" aria-label="Optional skill input 4" placeholder="optional 4th skill" autocomplete="off" />
-          <div class="suggestions" id="sug4" role="listbox" aria-label="Skill suggestions for input 4"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <label for="s5" style="color:var(--muted)">S5</label>
-        <div class="autocomplete-wrap">
-          <input class="skill-input" id="s5" aria-label="Optional skill input 5" placeholder="optional 5th skill" autocomplete="off" />
-          <div class="suggestions" id="sug5" role="listbox" aria-label="Skill suggestions for input 5"></div>
-        </div>
+      <div class="navbar-stats" aria-label="System Catalog Metrics">
+        <span class="stat-pill"><span class="indicator"></span> <strong>118</strong> Roles</span>
+        <span class="stat-pill"><strong>150</strong> Skills</span>
+        <span class="stat-pill"><strong>TF-IDF + Cosine</strong></span>
       </div>
     </div>
+  </header>
 
-    <div class="panel-title">TF-IDF Engine</div>
-    <div class="tag-area" id="tagArea" aria-live="polite">
-      <span style="font-size:.72rem;color:var(--muted);font-family:var(--mono);">type a skill above ↑</span>
-    </div>
+  <!-- Main Application Body -->
+  <main class="app-layout" role="main">
 
-    <button class="btn btn-primary" id="runBtn" type="button" aria-label="Run recommendation engine" onclick="runEngine()">Run Recommendation Engine</button>
-    <button class="btn btn-ghost" type="button" aria-label="Reset skills and results" onclick="resetAll()">Reset</button>
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <span class="hero-badge">Content-Based Information Retrieval</span>
+      <h2 id="hero-title" class="hero-title">Find the technology careers that match your skills.</h2>
+      <p class="hero-subtitle">
+        Vectorizes your technical profile using <strong>TF-IDF</strong> weighting and scores compatibility against candidate roles using <strong>Cosine Similarity</strong> and <strong>Weighted Skill Coverage</strong>.
+      </p>
 
-    <div class="step-hint">
-      <span class="icon">💡</span>
-      <span>Minimum 3 skills required. The engine uses <strong>TF-IDF</strong> weighting and <strong>Cosine Similarity</strong> to rank job roles against your profile vector.</span>
-    </div>
-  </section>
-
-  <section class="results-panel" id="resultsPanel" aria-live="polite" aria-busy="false" aria-label="Recommendation results">
-    <div class="panel-title">Similarity Engine</div>
-    <div class="empty-state" id="emptyState">
-      <div class="empty-icon">🎯</div>
-      <h3>No recommendations yet</h3>
-      <p>Enter at least 3 skills and run the engine.</p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  Built with HTML, CSS, JavaScript, TF-IDF, and Cosine Similarity.
-</footer>
-
-<script>
-// Dataset
-const ROLES = [
-  { role:"Data Scientist", skills:["Python","Machine Learning","SQL","Statistics","TensorFlow","Pandas","NumPy","Data Analysis","Scikit-learn","Jupyter"] },
-  { role:"ML Engineer", skills:["Python","Machine Learning","TensorFlow","PyTorch","MLOps","Docker","Kubernetes","CI/CD","Deep Learning","APIs"] },
-  { role:"Backend Developer", skills:["Java","Python","SQL","REST APIs","Node.js","PostgreSQL","Docker","Microservices","Spring Boot","Git"] },
-  { role:"DevOps Engineer", skills:["AWS","Docker","Kubernetes","CI/CD","Linux","Terraform","Ansible","Git","Monitoring","Bash"] },
-  { role:"Cloud Architect", skills:["AWS","Azure","GCP","Cloud","Docker","Kubernetes","Networking","Terraform","Security","Microservices"] },
-  { role:"Frontend Developer", skills:["JavaScript","React","HTML","CSS","TypeScript","Git","UI/UX","Node.js","REST APIs","Testing"] },
-  { role:"Full Stack Developer", skills:["JavaScript","React","Node.js","SQL","REST APIs","Docker","Git","HTML","CSS","Python"] },
-  { role:"Data Engineer", skills:["Python","SQL","Spark","Hadoop","Airflow","AWS","ETL","Kafka","Data Pipelines","PostgreSQL"] },
-  { role:"Cybersecurity Analyst", skills:["Networking","Security","Linux","Python","Firewalls","Penetration Testing","SIEM","Bash","Cryptography","Risk Assessment"] },
-  { role:"AI Research Scientist", skills:["Python","Deep Learning","TensorFlow","PyTorch","Mathematics","Statistics","NLP","Computer Vision","Research","Publications"] },
-  { role:"Mobile Developer", skills:["Swift","Kotlin","Java","React Native","Flutter","REST APIs","Git","UI/UX","Android","iOS"] },
-  { role:"Database Administrator", skills:["SQL","PostgreSQL","MySQL","MongoDB","Performance Tuning","Backup","Linux","Oracle","Replication","Security"] },
-  { role:"Systems Analyst", skills:["Business Analysis","SQL","Python","Documentation","Requirements","Project Management","UML","Agile","Testing","Stakeholders"] },
-  { role:"NLP Engineer", skills:["Python","NLP","Machine Learning","TensorFlow","Transformers","BERT","Hugging Face","Text Processing","Deep Learning","APIs"] },
-  { role:"Computer Vision Engineer", skills:["Python","OpenCV","Deep Learning","TensorFlow","PyTorch","Image Processing","CNNs","Computer Vision","Datasets","GPU"] },
-  { role:"Site Reliability Engineer", skills:["Linux","Python","Kubernetes","Monitoring","Docker","CI/CD","Bash","Alerting","SLOs","Automation"] },
-  { role:"Blockchain Developer", skills:["Solidity","Ethereum","Smart Contracts","JavaScript","Web3","Cryptography","Node.js","APIs","Git","Security"] },
-  { role:"Game Developer", skills:["C++","Unity","Unreal Engine","C#","Mathematics","Physics","3D Modeling","OpenGL","Performance","Git"] },
-  { role:"Automation Engineer", skills:["Python","Selenium","Automation","Testing","CI/CD","REST APIs","Bash","Robot Framework","Git","Reporting"] },
-  { role:"Quantum Computing Engineer", skills:["Python","Qiskit","Mathematics","Quantum","Linear Algebra","Research","Algorithms","Optimization","Physics","C++"] },
-];
-
-// Role descriptions
-const ROLE_DESCRIPTIONS = {
-  "Data Scientist": "Analyze complex datasets, build predictive models, and extract actionable insights using statistical and ML techniques.",
-  "ML Engineer": "Design, train, and deploy scalable machine learning systems in production environments.",
-  "Backend Developer": "Build robust server-side logic, APIs, and databases that power web applications.",
-  "DevOps Engineer": "Bridge development and operations by automating deployment pipelines and managing cloud infrastructure.",
-  "Cloud Architect": "Design and oversee cloud infrastructure strategies across AWS, Azure, or GCP platforms.",
-  "Frontend Developer": "Craft responsive, accessible user interfaces using modern JavaScript frameworks and design systems.",
-  "Full Stack Developer": "Handle both client-side and server-side development across the complete web stack.",
-  "Data Engineer": "Build and maintain data pipelines, warehouses, and infrastructure that feed analytics systems.",
-  "Cybersecurity Analyst": "Protect systems and networks by identifying vulnerabilities and implementing defensive measures.",
-  "AI Research Scientist": "Advance the state-of-the-art in AI through novel algorithms, architectures, and published research.",
-  "Mobile Developer": "Build native and cross-platform mobile applications for iOS and Android devices.",
-  "Database Administrator": "Maintain database integrity, performance, and security across relational and NoSQL systems.",
-  "Systems Analyst": "Bridge business requirements and technical solutions through analysis and system design.",
-  "NLP Engineer": "Build systems that understand and generate human language using transformer models.",
-  "Computer Vision Engineer": "Develop algorithms that interpret and analyze visual data from images and video.",
-  "Site Reliability Engineer": "Ensure system reliability and uptime through observability, automation, and incident response.",
-  "Blockchain Developer": "Build decentralized applications and smart contracts on blockchain platforms.",
-  "Game Developer": "Design and implement interactive game mechanics, graphics, and performance-critical systems.",
-  "Automation Engineer": "Create automated testing and deployment workflows to accelerate software delivery.",
-  "Quantum Computing Engineer": "Develop quantum algorithms and circuits leveraging quantum mechanical phenomena.",
-};
-
-const ALL_SKILLS = [...new Set(ROLES.flatMap(role => role.skills))].sort();
-
-// TF-IDF Engine
-function computeTFIDF(roleSkills, vocab, idfMap) {
-  const vector = {};
-  const total = roleSkills.length;
-  vocab.forEach(term => {
-    const tf = roleSkills.filter(skill => skill.toLowerCase() === term.toLowerCase()).length / total;
-    const idf = idfMap[term] || 0;
-    vector[term] = tf * idf;
-  });
-  return vector;
-}
-
-function buildIDF(roles, vocab) {
-  const totalDocuments = roles.length;
-  const idfMap = {};
-  vocab.forEach(term => {
-    const documentFrequency = roles.filter(role => role.skills.some(skill => skill.toLowerCase() === term.toLowerCase())).length;
-    idfMap[term] = Math.log(totalDocuments / (1 + documentFrequency));
-  });
-  return idfMap;
-}
-
-// Similarity Engine
-function cosineSimilarity(vecA, vecB, vocab) {
-  let dot = 0;
-  let magA = 0;
-  let magB = 0;
-  vocab.forEach(term => {
-    const a = vecA[term] || 0;
-    const b = vecB[term] || 0;
-    dot += a * b;
-    magA += a * a;
-    magB += b * b;
-  });
-  if (magA === 0 || magB === 0) return 0;
-  return dot / (Math.sqrt(magA) * Math.sqrt(magB));
-}
-
-// UI Components
-const skillInputs = [1, 2, 3, 4, 5].map(index => document.getElementById(`s${index}`));
-const runButton = document.getElementById('runBtn');
-const tagArea = document.getElementById('tagArea');
-const resultsPanel = document.getElementById('resultsPanel');
-
-// Autocomplete
-[1, 2, 3, 4, 5].forEach(index => {
-  const input = document.getElementById(`s${index}`);
-  const suggestions = document.getElementById(`sug${index}`);
-
-  input.addEventListener('input', () => {
-    const query = input.value.trim().toLowerCase();
-    suggestions.innerHTML = '';
-    if (!query) {
-      suggestions.classList.remove('open');
-      updateTags();
-      return;
-    }
-
-    const matches = ALL_SKILLS.filter(skill => skill.toLowerCase().startsWith(query)).slice(0, 8);
-    if (!matches.length) {
-      suggestions.classList.remove('open');
-      return;
-    }
-
-    matches.forEach(match => {
-      const item = document.createElement('div');
-      item.className = 'suggestion-item';
-      item.textContent = match;
-      item.setAttribute('role', 'option');
-      item.onmousedown = () => {
-        input.value = match;
-        suggestions.classList.remove('open');
-        updateTags();
-      };
-      suggestions.appendChild(item);
-    });
-
-    suggestions.classList.add('open');
-  });
-
-  input.addEventListener('blur', () => setTimeout(() => suggestions.classList.remove('open'), 150));
-  input.addEventListener('change', updateTags);
-  input.addEventListener('keydown', event => {
-    if (event.key === 'Enter') {
-      suggestions.classList.remove('open');
-      updateTags();
-    }
-  });
-});
-
-function getSkills() {
-  return skillInputs.map(input => input.value.trim()).filter(Boolean);
-}
-
-function updateTags() {
-  const skills = getSkills();
-  tagArea.innerHTML = '';
-
-  if (!skills.length) {
-    tagArea.innerHTML = '<span style="font-size:.72rem;color:var(--muted);font-family:var(--mono);">type a skill above ↑</span>';
-    runButton.disabled = true;
-    return;
-  }
-
-  skills.forEach(skill => {
-    const tag = document.createElement('span');
-    tag.className = 'tag';
-    tag.innerHTML = `${skill} <span class="tag-remove" title="remove" aria-label="Remove skill">×</span>`;
-    tag.querySelector('.tag-remove').onclick = () => {
-      skillInputs.forEach(input => {
-        if (input.value === skill) input.value = '';
-      });
-      updateTags();
-    };
-    tagArea.appendChild(tag);
-  });
-
-  runButton.disabled = skills.length < 3;
-}
-
-runButton.disabled = true;
-
-// Recommendation Engine
-function runEngine() {
-  const skills = getSkills();
-  if (skills.length < 3) return;
-
-  resultsPanel.setAttribute('aria-busy', 'true');
-  resultsPanel.innerHTML = `<div class="loader active"><div class="spinner"></div><p>computing vectors...</p></div>`;
-
-  setTimeout(() => {
-    const vocab = ALL_SKILLS;
-    const idf = buildIDF(ROLES, vocab);
-
-    const userVec = {};
-    vocab.forEach(term => {
-      const tf = skills.filter(skill => skill.toLowerCase() === term.toLowerCase()).length / skills.length;
-      userVec[term] = tf * (idf[term] || 0);
-    });
-
-    const scored = ROLES.map(role => {
-      const vec = computeTFIDF(role.skills, vocab, idf);
-      return {
-        ...role,
-        vec,
-        score: cosineSimilarity(userVec, vec, vocab),
-      };
-    }).sort((a, b) => b.score - a.score);
-
-    const top3 = scored.slice(0, 3);
-    const maxScore = top3[0].score || 1;
-
-    const termScores = {};
-    vocab.forEach(term => {
-      termScores[term] = userVec[term] || 0;
-    });
-    const topTerms = Object.entries(termScores)
-      .filter(([, value]) => value > 0)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 8);
-
-    const maxWeight = topTerms[0]?.[1] || 1;
-    resultsPanel.innerHTML = '';
-
-    const medals = ['🥇', '🥈', '🥉'];
-    const ranks = ['rank-1', 'rank-2', 'rank-3'];
-
-    top3.forEach((item, index) => {
-      const pct = Math.round((item.score / maxScore) * 100);
-      const circumference = 2 * Math.PI * 27;
-      const offset = circumference - (pct / 100) * circumference;
-      const matchedSkills = item.skills.filter(skill => skills.some(userSkill => userSkill.toLowerCase() === skill.toLowerCase()));
-      const extraSkills = item.skills.filter(skill => !matchedSkills.includes(skill)).slice(0, 4);
-
-      const card = document.createElement('article');
-      card.className = `result-card ${ranks[index]}`;
-      card.innerHTML = `
-        <div>
-          <div class="rank-badge">${medals[index]} RANK ${index + 1}</div>
-          <h2>${item.role}</h2>
-          <p class="role-desc">${getRoleDesc(item.role)}</p>
-          <div class="skill-pills">
-            ${matchedSkills.map(skill => `<span class="pill pill-match">✓ ${skill}</span>`).join('')}
-            ${extraSkills.map(skill => `<span class="pill pill-extra">${skill}</span>`).join('')}
-          </div>
+      <!-- Preset Example Profiles Bar -->
+      <div class="examples-bar" aria-label="Preset Example Profiles">
+        <span class="examples-label">Try an example profile:</span>
+        <div class="examples-list">
+          <button type="button" class="example-btn" data-profile="aiml">🤖 AI / ML Profile</button>
+          <button type="button" class="example-btn" data-profile="fullstack">🌐 Full Stack Profile</button>
+          <button type="button" class="example-btn" data-profile="devops">☁️ Cloud / DevOps Profile</button>
+          <button type="button" class="example-btn" data-profile="data">📊 Data Profile</button>
         </div>
-        <div class="score-ring">
-          <div class="ring-wrap">
-            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
-              <circle class="ring-bg" cx="32" cy="32" r="27"/>
-              <circle class="ring-fill" cx="32" cy="32" r="27"
-                stroke-dasharray="${circumference}"
-                stroke-dashoffset="${offset}"
-              />
-            </svg>
-            <div class="ring-pct">${pct}%</div>
-          </div>
-          <span class="score-label">match</span>
+      </div>
+    </section>
+
+    <!-- Interactive Skill Selector Card -->
+    <section class="selector-card" aria-label="Skill Profile Input Form">
+      <div class="selector-header">
+        <span class="section-label">Your Technical Skills</span>
+        <span id="skillCounter" class="skill-counter" aria-live="polite">0 / 10 skills (minimum 3 required)</span>
+      </div>
+
+      <!-- Autocomplete Search Input -->
+      <div class="search-wrapper">
+        <input
+          type="text"
+          id="skillSearchInput"
+          class="search-input-box"
+          placeholder="Search skill or alias (e.g. Python, ml, k8s, React, postgres, PyTorch)..."
+          autocomplete="off"
+          aria-autocomplete="list"
+          aria-controls="suggestionsMenu"
+          aria-label="Search and select technical skills"
+        />
+        <div id="suggestionsMenu" class="suggestions-menu" role="listbox" aria-label="Skill suggestions"></div>
+      </div>
+
+      <!-- Selected Skills Tag Cloud -->
+      <div id="tagsCloud" class="tags-cloud" aria-live="polite" aria-label="Selected skills list">
+        <span class="tags-placeholder">Type skills or aliases above (e.g., Python, ml, k8s, React, SQL) or click an example profile ↑</span>
+      </div>
+
+      <!-- Validation Alert Box -->
+      <div id="validationAlert" class="alert-box" role="alert" aria-live="assertive"></div>
+
+      <!-- Action Controls -->
+      <div class="controls-bar">
+        <button type="button" id="runButton" class="btn-primary" disabled aria-label="Run career recommendation engine">
+          <span>Run Recommendation Engine</span>
+          <span aria-hidden="true">→</span>
+        </button>
+        <button type="button" id="resetButton" class="btn-secondary" aria-label="Reset skills profile">
+          Reset Profile
+        </button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" aria-label="Recommendation Results Area">
+      <div class="results-header">
+        <h3 class="results-title">Career Matches &amp; Explainability</h3>
+      </div>
+
+      <div id="resultsContainer">
+        <!-- Initial Empty State -->
+        <div id="emptyStateCard" class="empty-state-card">
+          <div class="empty-icon" aria-hidden="true">🎯</div>
+          <h3>No recommendations generated yet</h3>
+          <p>Add at least 3 technical skills to your profile above or select an example profile to compute career matches.</p>
         </div>
-      `;
-      resultsPanel.appendChild(card);
-    });
+      </div>
+    </section>
 
-    if (topTerms.length) {
-      const viz = document.createElement('section');
-      viz.className = 'vector-section';
-      viz.setAttribute('aria-label', 'User profile vector visualization');
-      viz.innerHTML = `
-        <div class="vector-title">TF-IDF Engine</div>
-        <div class="vector-bars">
-          ${topTerms.map(([term, weight]) => `
-            <div class="vbar-row">
-              <div class="vbar-label">${term}</div>
-              <div class="vbar-track">
-                <div class="vbar-fill" style="width:${Math.round((weight / maxWeight) * 100)}%"></div>
-              </div>
-              <div class="vbar-val">${weight.toFixed(3)}</div>
-            </div>
-          `).join('')}
+    <!-- Methodology & Architecture Section -->
+    <section class="methodology-section" aria-labelledby="methodology-title">
+      <div class="panel-header">
+        <h3 id="methodology-title">Scientific Methodology &amp; System Architecture</h3>
+        <span>Information Retrieval Principles</span>
+      </div>
+
+      <div class="methodology-grid">
+        <div class="method-box">
+          <h4>1. TF-IDF Vectorization</h4>
+          <p>
+            Transforms user skills into high-dimensional sparse vectors where weights reflect term frequency balanced by Inverse Document Frequency <code>ln(N / (1 + DF))</code> to penalize overly common terms.
+          </p>
         </div>
-      `;
-      resultsPanel.appendChild(viz);
-    }
 
-    resultsPanel.setAttribute('aria-busy', 'false');
-  }, 650);
-}
+        <div class="method-box">
+          <h4>2. Cosine Similarity</h4>
+          <p>
+            Measures the cosine angle <code>(u · r) / (||u|| * ||r||)</code> between the user query vector and candidate role profiles, providing an orientation-based similarity metric in range <code>[0.0, 1.0]</code>.
+          </p>
+        </div>
 
-function getRoleDesc(role) {
-  return ROLE_DESCRIPTIONS[role] || 'A specialized engineering role at the cutting edge of modern technology.';
-}
+        <div class="method-box">
+          <h4>3. Hybrid Scoring &amp; Explainability</h4>
+          <p>
+            Combines 65% cosine proximity with 35% Weighted Skill Coverage to prioritize essential core requirements and identify high-priority missing skills to learn.
+          </p>
+        </div>
+      </div>
+    </section>
 
-// Utility Functions
-function resetAll() {
-  skillInputs.forEach(input => {
-    input.value = '';
-  });
-  updateTags();
-  resultsPanel.setAttribute('aria-busy', 'false');
-  resultsPanel.innerHTML = `
-    <div class="panel-title">Similarity Engine</div>
-    <div class="empty-state" id="emptyState">
-      <div class="empty-icon">🎯</div>
-      <h3>No recommendations yet</h3>
-      <p>Enter at least 3 skills and run the engine.</p>
-    </div>`;
-}
+  </main>
 
-updateTags();
-</script>
+  <!-- Technical Footer -->
+  <footer class="app-footer" role="contentinfo">
+    <p>CareerMatch • Built with Vanilla HTML5, CSS3, ES6+ JavaScript, TF-IDF, and Cosine Similarity • Zero External Dependencies</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
 </body>
 </html>

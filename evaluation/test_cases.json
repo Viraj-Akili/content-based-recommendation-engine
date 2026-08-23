@@ -1,0 +1,376 @@
+[
+  {
+    "id": "profile_001",
+    "category": "AI / Machine Learning",
+    "skills": ["python", "machine learning", "pytorch", "mlops", "docker"],
+    "relevantRoles": ["Machine Learning Engineer", "Deep Learning Engineer", "MLOps Engineer"]
+  },
+  {
+    "id": "profile_002",
+    "category": "AI / Machine Learning",
+    "skills": ["python", "deep learning", "pytorch", "cuda", "cnns"],
+    "relevantRoles": ["Deep Learning Engineer", "Computer Vision Engineer", "Machine Learning Engineer"]
+  },
+  {
+    "id": "profile_003",
+    "category": "AI / Machine Learning",
+    "skills": ["python", "nlp", "transformers", "hugging face", "bert"],
+    "relevantRoles": ["NLP Engineer", "Prompt Engineer & LLM Specialist", "AI Research Scientist"]
+  },
+  {
+    "id": "profile_004",
+    "category": "AI / Machine Learning",
+    "skills": ["python", "opencv", "computer vision", "deep learning", "cnns"],
+    "relevantRoles": ["Computer Vision Engineer", "Deep Learning Engineer", "Robotics Software Engineer"]
+  },
+  {
+    "id": "profile_005",
+    "category": "AI / Machine Learning",
+    "skills": ["mlops", "kubernetes", "docker", "ci/cd", "terraform", "python"],
+    "relevantRoles": ["MLOps Engineer", "DevOps Engineer", "Platform Engineer (Internal Developer Platform)"]
+  },
+  {
+    "id": "profile_006",
+    "category": "AI / Machine Learning",
+    "skills": ["prompt engineering", "nlp", "python", "vector databases", "langchain"],
+    "relevantRoles": ["Prompt Engineer & LLM Specialist", "NLP Engineer", "Vector Database & Search Engineer"]
+  },
+
+  {
+    "id": "profile_007",
+    "category": "Data Science",
+    "skills": ["python", "machine learning", "sql", "statistics", "pandas", "scikit-learn"],
+    "relevantRoles": ["Data Scientist", "Statistician", "Decision Scientist"]
+  },
+  {
+    "id": "profile_008",
+    "category": "Data Science",
+    "skills": ["mathematics", "statistics", "python", "c++", "linear algebra"],
+    "relevantRoles": ["Quantitative Analyst", "Quantitative Researcher", "Statistician"]
+  },
+  {
+    "id": "profile_009",
+    "category": "Data Science",
+    "skills": ["statistics", "a/b testing", "python", "sql", "data analysis"],
+    "relevantRoles": ["Decision Scientist", "Data Scientist", "Business Intelligence Analyst"]
+  },
+  {
+    "id": "profile_010",
+    "category": "Data Science",
+    "skills": ["sql", "tableau", "power bi", "data visualization", "data analysis"],
+    "relevantRoles": ["Business Intelligence Analyst", "Data Visualization Specialist", "Data Scientist"]
+  },
+  {
+    "id": "profile_011",
+    "category": "Data Science",
+    "skills": ["statistics", "mathematics", "r", "python", "data analysis"],
+    "relevantRoles": ["Statistician", "Clinical Data Scientist", "Data Scientist"]
+  },
+  {
+    "id": "profile_012",
+    "category": "Data Science",
+    "skills": ["data visualization", "d3.js", "javascript", "ui/ux", "sql"],
+    "relevantRoles": ["Data Visualization Specialist", "Frontend Developer", "UI Engineer & Design Systems Specialist"]
+  },
+
+  {
+    "id": "profile_013",
+    "category": "Data Engineering",
+    "skills": ["python", "sql", "spark", "airflow", "etl", "data pipelines"],
+    "relevantRoles": ["Data Engineer", "Big Data Engineer", "Analytics Engineer"]
+  },
+  {
+    "id": "profile_014",
+    "category": "Data Engineering",
+    "skills": ["spark", "hadoop", "scala", "java", "kafka"],
+    "relevantRoles": ["Big Data Engineer", "Data Engineer", "Stream Processing Engineer"]
+  },
+  {
+    "id": "profile_015",
+    "category": "Data Engineering",
+    "skills": ["sql", "dbt", "snowflake", "data pipelines", "python"],
+    "relevantRoles": ["Analytics Engineer", "Data Engineer", "Data Warehouse Architect"]
+  },
+  {
+    "id": "profile_016",
+    "category": "Data Engineering",
+    "skills": ["kafka", "flink", "java", "distributed systems", "python"],
+    "relevantRoles": ["Stream Processing Engineer", "Big Data Engineer", "Distributed Systems Engineer"]
+  },
+
+  {
+    "id": "profile_017",
+    "category": "Software Engineering",
+    "skills": ["python", "java", "sql", "rest apis", "postgresql", "docker"],
+    "relevantRoles": ["Backend Developer", "Full Stack Developer", "Python Backend Developer"]
+  },
+  {
+    "id": "profile_018",
+    "category": "Software Engineering",
+    "skills": ["c++", "c", "linux", "operating systems", "performance"],
+    "relevantRoles": ["Systems Software Engineer", "C++ High Performance Engineer", "Embedded Systems Engineer"]
+  },
+  {
+    "id": "profile_019",
+    "category": "Software Engineering",
+    "skills": ["rust", "linux", "algorithms", "rest apis", "performance"],
+    "relevantRoles": ["Rust Systems Developer", "Systems Software Engineer", "Backend Developer"]
+  },
+  {
+    "id": "profile_020",
+    "category": "Software Engineering",
+    "skills": ["java", "spring boot", "microservices", "sql", "postgresql", "docker"],
+    "relevantRoles": ["Java Enterprise Engineer", "Backend Developer", "Microservices Architect"]
+  },
+  {
+    "id": "profile_021",
+    "category": "Software Engineering",
+    "skills": ["go", "rest apis", "grpc", "docker", "kubernetes", "microservices"],
+    "relevantRoles": ["Go Backend Developer", "Backend Developer", "Platform Engineer (Internal Developer Platform)"]
+  },
+  {
+    "id": "profile_022",
+    "category": "Software Engineering",
+    "skills": ["distributed systems", "algorithms", "go", "java", "networking"],
+    "relevantRoles": ["Distributed Systems Engineer", "Systems Software Engineer", "Go Backend Developer"]
+  },
+  {
+    "id": "profile_023",
+    "category": "Software Engineering",
+    "skills": ["python", "testing", "selenium", "ci/cd", "rest apis", "bash"],
+    "relevantRoles": ["QA Automation & Test Systems Engineer", "Backend Developer", "DevOps Engineer"]
+  },
+
+  {
+    "id": "profile_024",
+    "category": "Web Development",
+    "skills": ["javascript", "react", "html", "css", "typescript", "ui/ux"],
+    "relevantRoles": ["Frontend Developer", "React Ecosystem Specialist", "Full Stack Developer"]
+  },
+  {
+    "id": "profile_025",
+    "category": "Web Development",
+    "skills": ["javascript", "react", "node.js", "sql", "rest apis", "html", "css"],
+    "relevantRoles": ["Full Stack Developer", "Frontend Developer", "Next.js & Full Stack React Developer"]
+  },
+  {
+    "id": "profile_026",
+    "category": "Web Development",
+    "skills": ["css", "javascript", "typescript", "react", "ui/ux", "storybook"],
+    "relevantRoles": ["UI Engineer & Design Systems Specialist", "Frontend Developer", "Web Accessibility (a11y) Specialist"]
+  },
+  {
+    "id": "profile_027",
+    "category": "Web Development",
+    "skills": ["next.js", "react", "typescript", "javascript", "node.js", "postgresql"],
+    "relevantRoles": ["Next.js & Full Stack React Developer", "React Ecosystem Specialist", "Full Stack Developer"]
+  },
+  {
+    "id": "profile_028",
+    "category": "Web Development",
+    "skills": ["angular", "typescript", "rxjs", "html", "css"],
+    "relevantRoles": ["Angular Enterprise Developer", "Frontend Developer", "UI Engineer & Design Systems Specialist"]
+  },
+  {
+    "id": "profile_029",
+    "category": "Web Development",
+    "skills": ["vue.js", "javascript", "typescript", "html", "css"],
+    "relevantRoles": ["Vue.js & Nuxt Developer", "Frontend Developer", "Full Stack Developer"]
+  },
+  {
+    "id": "profile_030",
+    "category": "Web Development",
+    "skills": ["html", "accessibility", "css", "javascript", "ui/ux"],
+    "relevantRoles": ["Web Accessibility (a11y) Specialist", "UI Engineer & Design Systems Specialist", "Frontend Developer"]
+  },
+
+  {
+    "id": "profile_031",
+    "category": "Cloud / DevOps",
+    "skills": ["aws", "docker", "kubernetes", "ci/cd", "linux", "terraform"],
+    "relevantRoles": ["DevOps Engineer", "Cloud Solutions Architect", "Site Reliability Engineer (SRE)"]
+  },
+  {
+    "id": "profile_032",
+    "category": "Cloud / DevOps",
+    "skills": ["cloud", "aws", "azure", "gcp", "kubernetes", "security", "terraform"],
+    "relevantRoles": ["Cloud Solutions Architect", "Multi-Cloud Engineer", "DevOps Engineer"]
+  },
+  {
+    "id": "profile_033",
+    "category": "Cloud / DevOps",
+    "skills": ["linux", "kubernetes", "monitoring", "python", "docker", "slos", "alerting"],
+    "relevantRoles": ["Site Reliability Engineer (SRE)", "Observability & Telemetry Engineer", "DevOps Engineer"]
+  },
+  {
+    "id": "profile_034",
+    "category": "Cloud / DevOps",
+    "skills": ["kubernetes", "terraform", "go", "docker", "ci/cd", "cloud"],
+    "relevantRoles": ["Platform Engineer (Internal Developer Platform)", "Kubernetes Cluster Architect", "DevOps Engineer"]
+  },
+  {
+    "id": "profile_035",
+    "category": "Cloud / DevOps",
+    "skills": ["terraform", "aws", "cloud", "linux", "ansible", "git"],
+    "relevantRoles": ["Infrastructure as Code (IaC) Engineer", "DevOps Engineer", "Cloud Solutions Architect"]
+  },
+
+  {
+    "id": "profile_036",
+    "category": "Cybersecurity",
+    "skills": ["security", "networking", "linux", "firewalls", "siem", "risk assessment"],
+    "relevantRoles": ["Cybersecurity Analyst", "Security Operations Center (SOC) Analyst", "Incident Response Specialist"]
+  },
+  {
+    "id": "profile_037",
+    "category": "Cybersecurity",
+    "skills": ["penetration testing", "security", "linux", "python", "networking"],
+    "relevantRoles": ["Penetration Tester (Ethical Hacker)", "Cybersecurity Analyst", "Application Security (AppSec) Engineer"]
+  },
+  {
+    "id": "profile_038",
+    "category": "Cybersecurity",
+    "skills": ["security", "cloud", "aws", "terraform", "kubernetes"],
+    "relevantRoles": ["Cloud Security Engineer", "DevSecOps Engineer", "Cloud Solutions Architect"]
+  },
+  {
+    "id": "profile_039",
+    "category": "Cybersecurity",
+    "skills": ["cryptography", "mathematics", "c++", "rust", "security"],
+    "relevantRoles": ["Cryptography Engineer", "Blockchain Core Developer", "Zero-Knowledge Proof (ZKP) Engineer"]
+  },
+  {
+    "id": "profile_040",
+    "category": "Cybersecurity",
+    "skills": ["security", "testing", "python", "javascript", "ci/cd", "rest apis"],
+    "relevantRoles": ["Application Security (AppSec) Engineer", "DevSecOps Engineer", "Penetration Tester (Ethical Hacker)"]
+  },
+
+  {
+    "id": "profile_041",
+    "category": "Mobile Development",
+    "skills": ["swift", "ios", "rest apis", "ui/ux", "git"],
+    "relevantRoles": ["Native iOS Developer", "Mobile App Developer", "Mobile UI/UX Design Technologist"]
+  },
+  {
+    "id": "profile_042",
+    "category": "Mobile Development",
+    "skills": ["kotlin", "android", "java", "rest apis", "ui/ux"],
+    "relevantRoles": ["Native Android Developer", "Mobile App Developer", "Flutter & Dart Developer"]
+  },
+  {
+    "id": "profile_043",
+    "category": "Mobile Development",
+    "skills": ["react native", "javascript", "typescript", "react", "rest apis"],
+    "relevantRoles": ["React Native Developer", "Mobile App Developer", "Frontend Developer"]
+  },
+  {
+    "id": "profile_044",
+    "category": "Mobile Development",
+    "skills": ["flutter", "dart", "rest apis", "ui/ux", "git"],
+    "relevantRoles": ["Flutter & Dart Developer", "Mobile App Developer", "React Native Developer"]
+  },
+
+  {
+    "id": "profile_045",
+    "category": "Database Engineering",
+    "skills": ["sql", "postgresql", "performance tuning", "linux", "replication"],
+    "relevantRoles": ["PostgreSQL Database Specialist", "Database Administrator (DBA)", "Database Reliability Engineer"]
+  },
+  {
+    "id": "profile_046",
+    "category": "Database Engineering",
+    "skills": ["mongodb", "cassandra", "redis", "distributed systems", "sql"],
+    "relevantRoles": ["NoSQL Database Architect", "Database Administrator (DBA)", "Backend Developer"]
+  },
+  {
+    "id": "profile_047",
+    "category": "Database Engineering",
+    "skills": ["vector databases", "python", "algorithms", "c++", "machine learning"],
+    "relevantRoles": ["Vector Database & Search Engineer", "Prompt Engineer & LLM Specialist", "NLP Engineer"]
+  },
+
+  {
+    "id": "profile_048",
+    "category": "Systems / Business Analysis",
+    "skills": ["business analysis", "sql", "requirements", "documentation", "agile"],
+    "relevantRoles": ["Systems Analyst", "IT Business Analyst", "Technical Product Manager"]
+  },
+  {
+    "id": "profile_049",
+    "category": "Systems / Business Analysis",
+    "skills": ["project management", "requirements", "rest apis", "sql", "agile", "stakeholders"],
+    "relevantRoles": ["Technical Product Manager", "IT Business Analyst", "Solutions Engineer (Pre-Sales / Integrations)"]
+  },
+
+  {
+    "id": "profile_050",
+    "category": "Embedded / IoT",
+    "skills": ["c", "c++", "embedded systems", "rtos", "linux", "hardware interfacing"],
+    "relevantRoles": ["Embedded Systems Engineer", "Firmware Developer", "Robotics Software Engineer"]
+  },
+  {
+    "id": "profile_051",
+    "category": "Embedded / IoT",
+    "skills": ["ros", "c++", "python", "computer vision", "mathematics", "linux"],
+    "relevantRoles": ["Robotics Software Engineer", "Autonomous Vehicles Systems Engineer", "Computer Vision Engineer"]
+  },
+  {
+    "id": "profile_052",
+    "category": "Embedded / IoT",
+    "skills": ["iot", "mqtt", "cloud", "python", "embedded systems", "security"],
+    "relevantRoles": ["IoT Solutions Architect", "Embedded Systems Engineer", "Edge AI & TinyML Engineer"]
+  },
+
+  {
+    "id": "profile_053",
+    "category": "Blockchain / Web3",
+    "skills": ["solidity", "smart contracts", "ethereum", "javascript", "security", "web3"],
+    "relevantRoles": ["Solidity Smart Contract Developer", "Smart Contract Security Auditor", "DeFi Protocol Engineer"]
+  },
+  {
+    "id": "profile_054",
+    "category": "Blockchain / Web3",
+    "skills": ["smart contracts", "solidity", "security", "ethereum", "cryptography"],
+    "relevantRoles": ["Smart Contract Security Auditor", "Solidity Smart Contract Developer", "Blockchain Core Developer"]
+  },
+
+  {
+    "id": "profile_055",
+    "category": "Game Development",
+    "skills": ["unity", "c#", "mathematics", "physics", "git"],
+    "relevantRoles": ["Unity 3D Developer", "Gameplay Programmer", "General Game Developer"]
+  },
+  {
+    "id": "profile_056",
+    "category": "Game Development",
+    "skills": ["unreal engine", "c++", "mathematics", "physics", "performance"],
+    "relevantRoles": ["Unreal Engine C++ Programmer", "Game Engine Programmer", "General Game Developer"]
+  },
+  {
+    "id": "profile_057",
+    "category": "Game Development",
+    "skills": ["opengl", "vulkan", "c++", "mathematics", "linear algebra", "3d modeling"],
+    "relevantRoles": ["3D Graphics Programmer (Shaders & Rendering)", "Game Engine Programmer", "VR / AR (Spatial Computing) Developer"]
+  },
+
+  {
+    "id": "profile_058",
+    "category": "Research",
+    "skills": ["python", "deep learning", "pytorch", "mathematics", "statistics", "research", "publications"],
+    "relevantRoles": ["AI Research Scientist", "Deep Learning Engineer", "Computational Scientist & Numerical Modeler"]
+  },
+  {
+    "id": "profile_059",
+    "category": "Research",
+    "skills": ["python", "r", "statistics", "data analysis", "machine learning", "research"],
+    "relevantRoles": ["Bioinformatics & Genomics Scientist", "Clinical Data Scientist", "Data Scientist"]
+  },
+
+  {
+    "id": "profile_060",
+    "category": "Emerging Technology",
+    "skills": ["python", "qiskit", "quantum", "mathematics", "linear algebra", "physics"],
+    "relevantRoles": ["Quantum Computing Engineer", "Quantum Algorithm Developer", "Computational Scientist & Numerical Modeler"]
+  }
+]
