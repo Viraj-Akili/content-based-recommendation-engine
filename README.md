@@ -8,7 +8,7 @@ CareerMatch is an Information Retrieval & Machine Learning recommendation system
 
 ## Live Demo
 
-- **Deployment URL**: (https://content-based-recommendation-engine.vercel.app/))(or deploy via GitHub Pages / Vercel)*
+- **Deployment URL**: (https://content-based-recommendation-engine.vercel.app/) (or deploy via GitHub Pages / Vercel)*
 - **Offline Benchmark Suite**: `python evaluation/evaluate.py`
 
 ---
